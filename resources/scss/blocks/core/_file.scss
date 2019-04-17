@@ -1,0 +1,39 @@
+////
+/// File block.
+///
+/// @group  Blocks
+/// @author David Graham <david.graham@strangebrewdesign.com>
+/// @link   http://www.strangebrewdesign.com
+////
+
+.wp-block-file {
+	margin-bottom: 1.5em;
+
+	&.aligncenter {
+		text-align: center;
+	}
+
+	&.alignright {
+		text-align: right;
+	}
+
+	&__button {
+		background:      color( black );
+		color:           #fff;
+		padding:         0.5em 1em;
+		text-decoration: none;
+
+		* + & {
+			margin-left: 0.75em;
+		}
+
+		&:hover,
+		&:visited,
+		&:focus,
+		&:active {
+			color:           #fff;
+			opacity:         0.85;
+			text-decoration: none;
+		}
+	}
+}

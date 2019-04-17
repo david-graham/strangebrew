@@ -1,0 +1,15 @@
+////
+/// Table block.
+///
+/// @group  Blocks
+/// @author David Graham <david.graham@strangebrewdesign.com>
+/// @link   http://www.strangebrewdesign.com
+////
+
+.wp-block-table {
+	width: 100%;
+
+	&.has-fixed-layout {
+		table-layout: fixed;
+	}
+}

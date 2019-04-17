@@ -1,0 +1,59 @@
+////
+/// Gallery (shortcode) component.
+///
+/// @group Components
+/// @author David Graham <david.graham@strangebrewdesign.com>
+/// @link http://www.strangebrewdesign.com
+////
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	margin: rem(1.5rem -6px);
+
+	// Circle type gallery
+	&-type-circle {
+
+		img {
+			border-radius: 50%;
+		}
+	}
+
+	// List item
+	&-item {
+		padding: rem(6px);
+		text-align: center;
+	}
+
+	// Columns width
+	@media ( min-width: break(small) ) {
+
+		@for $i from 1 through 10 {
+
+			&-columns-#{ $i } &-item {
+				width: calc( 100% / #{ $i } );
+			}
+		}
+	}
+
+	// Thumbnail container
+	&-icon {
+
+		// Image thumbnail
+		img {
+			width: auto;
+			max-width: 100%;
+			height: auto;
+			margin: 0 auto;
+			box-sizing: border-box;
+			border: rem(6px solid #ccc);
+		}
+
+		// Hover effect
+		img:hover,
+		a:focus img {
+			border-color: color(primary);
+		}
+	}
+}

@@ -1,0 +1,37 @@
+////
+/// Latest posts block.
+///
+/// @group  Blocks
+/// @author David Graham <david.graham@strangebrewdesign.com>
+/// @link   http://www.strangebrewdesign.com
+////
+
+.wp-block-latest-posts {
+	list-style-type: none;
+	margin-left: 0;
+
+	&.is-grid {
+		display:    flex;
+		flex-wrap:  wrap;
+		padding:    0;
+
+		li {
+			margin-right: rem(24px);
+			width:  100%;
+		}
+	}
+
+	@media ( min-width: break(small) ) {
+
+		@for $i from 2 through 6 {
+
+			&.columns-#{ $i } li {
+				width: calc( ( 100% / #{ $i } ) - 24px );
+			}
+		}
+	}
+
+	&__post-date {
+		display: block;
+	}
+}

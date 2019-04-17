@@ -1,0 +1,46 @@
+////
+/// Pagination component.
+///
+/// @group  Components
+/// @author David Graham <david.graham@strangebrewdesign.com>
+/// @link   http://www.strangebrewdesign.com
+////
+
+.pagination {
+
+	// Header/Title element.
+	&__title {}
+
+	// The list of items.
+	&__items {
+		list-style-type: none;
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	// Individual items.
+	&__item {
+		display: inline-block;
+		margin: rem(0 3px);
+
+		&--prev {}
+		&--next {}
+		&--current {}
+		&--dots {}
+	}
+
+	// The link or span element.
+	&__anchor {
+		display: block;
+		padding: rem(6px 12px);
+		background: rgba(0, 0, 0, 0.1);
+
+		&--link {
+			background: color(primary);
+			color: #fff;
+		}
+
+		&--current {}
+		&--dots {}
+	}
+}

@@ -1,0 +1,38 @@
+////
+/// App main component.
+///
+/// Wraps the page's main output. This is generally the post list or a single
+/// post and its comments.
+///
+/// @group  Components
+/// @author David Graham <david.graham@strangebrewdesign.com>
+/// @link   http://www.strangebrewdesign.com
+////
+
+.app-main {
+	max-width: content-width();
+	box-sizing: content-box;
+	margin: 3rem auto;
+	padding: 0 6rem;
+
+	.layout-wide & {
+		max-width: content-width() + 12rem;
+	}
+
+	.page-template-entry-content-only.php,
+	.page-template-landing-page & {
+		margin: 0 auto;
+	}
+
+	@media ( max-width: break(tablet) ) {
+		padding: 0 3rem;
+	}
+
+	@media ( max-width: break(small) ) {
+		padding: 0 2.25rem;
+	}
+
+	@media ( max-width: break(mobile) ) {
+		padding: 0 1.5rem;
+	}
+}

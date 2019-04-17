@@ -1,0 +1,35 @@
+////
+/// Columns block.
+///
+/// @group  Blocks
+/// @author David Graham <david.graham@strangebrewdesign.com>
+/// @link   http://www.strangebrewdesign.com
+////
+
+.wp-block-columns {
+	display: flex;
+
+	@media ( max-width: break(small) ) {
+		display: block;
+	}
+
+	// Individual columns.
+	.wp-block-column {
+		flex: 1;
+		padding: 0 2.5%;
+	}
+
+	// Remove outermost padding.
+	&:not(.alignfull) .wp-block-column:first-of-type {
+		padding-left: 0;
+	}
+
+	&:not(.alignfull) .wp-block-column:last-of-type {
+		padding-right: 0;
+	}
+}
+
+// Editor specific styling. Make sure columns span correctly.
+.editor-inner-blocks {
+	flex: 1;
+}

@@ -1,0 +1,39 @@
+////
+/// App content component.
+///
+/// This component generally wraps the `<main>` section and the sidebar.
+///
+/// @group  Components
+/// @author David Graham <david.graham@strangebrewdesign.com>
+/// @link   http://www.strangebrewdesign.com
+////
+
+.app-content {
+	background: #fff;
+
+	&::after,
+	&::before {
+		@extend %clearfix;
+	}
+
+	.layout-boxed & {
+		max-width: content-width() + 12rem;
+		margin: auto;
+
+		@media ( min-width: break(tablet) ) {
+			margin-top: 1.5rem;
+			margin-bottom: 1.5rem;
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
+		}
+	}
+
+	.layout-wide & {
+		@media ( min-width: break(tablet) ) {
+			margin: 0 auto;
+		}
+	}
+
+	.layout-boxed.layout-wide & {
+		max-width: content-width() + 24rem;
+	}
+}

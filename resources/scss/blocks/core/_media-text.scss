@@ -1,0 +1,68 @@
+////
+/// Media text block.
+///
+/// @group  Blocks
+/// @author David Graham <david.graham@strangebrewdesign.com>
+/// @link   http://www.strangebrewdesign.com
+////
+
+.wp-block-media-text {
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-areas: "media-text-media media-text-content";
+	grid-template-columns: 1fr 1fr;
+	column-gap: 3rem;
+	row-gap: 1.5rem;
+
+	&.is-stacked-on-mobile {
+
+		@media ( max-width: break(small) ) {
+			grid-template-columns: 100% !important; // Overwrite core's inline style.
+			grid-template-areas:
+				"media-text-media"
+				"media-text-content";
+		}
+	}
+
+	&__media {
+		grid-area: media-text-media;
+		margin: 0;
+	}
+
+	&__content {
+		grid-area: media-text-content;
+		align-self: center;
+
+		> *:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	> figure > img,
+	> figure > video {
+		max-width: unset;
+		width: 100%;
+		vertical-align: middle;
+	}
+
+	&.has-media-on-the-right {
+		grid-template-areas: "media-text-content media-text-media";
+	}
+
+	// Add padding for .alignfull to pad text.
+	&.alignfull &__content {
+		padding: 10%;
+	}
+
+	// Remove column gap as padding takes care of whitespace.
+	&.alignfull {
+		column-gap: 0;
+		row-gap: 0;
+	}
+
+	// Make img cover column when aligned to full width.
+	&.alignfull .wp-block-media-text__media img {
+		object-fit: cover;
+		height: 100%;
+	}
+}

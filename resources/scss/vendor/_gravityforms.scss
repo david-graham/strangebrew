@@ -1,0 +1,170 @@
+////
+/// Gravity Forms basic CSS.
+///
+/// @group  Vendor
+/// @author David Graham <david.graham@strangebrewdesign.com>
+/// @link   http://www.strangebrewdesign.com
+////
+
+.gform_wrapper {
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+	}
+
+	li {
+		margin: 0 0 1.125rem;
+	}
+
+	// Validation messages.
+
+	.validation_error {
+		margin-bottom: 1.5rem;
+		padding: 1.5rem;
+		background: #eee;
+		border-left: 3px solid color(primary);
+	}
+
+	.validation_message {
+		color: color(primary);
+		font-style: italic;
+	}
+
+	// Required label.
+
+	.gfield_required {
+		color: color(primary);
+		margin-left: 0.15em;
+	}
+
+	.gform_validation_container,
+	.gfield_visibility_hidden,
+	.hidden_label .gfield_label,
+	.hidden_sublabel {
+		position: absolute;
+		top: -9999em;
+		right: -9999em;
+	}
+
+	// Field description.
+
+	.field_description_above .gfield_description {
+		margin-bottom: 0.75rem;
+	}
+
+	.field_description_below .gfield_description {
+		margin-top: 0.75rem;
+	}
+
+	// Complex fields.
+
+	.clear-multi,
+	.ginput_complex,
+	.gfield_radio,
+	.gfield_checkbox {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.ginput_complex {
+		margin: 0 -0.75rem;
+
+		span {
+			margin: 0 0.75rem;
+		}
+
+		label {
+			margin: 0.75rem 0 -0.75rem;
+			font-weight: 400;
+		}
+	}
+
+	.ginput_container_consent,
+	.gfield_radio,
+	.gfield_checkbox {
+
+		li {
+			margin: 0 0 0 0.75rem;
+		}
+
+		label {
+			display: inline-block;
+			margin: 0;
+			font-weight: 400;
+		}
+
+		input {
+			margin: 0.375rem 0.375rem 0 0;
+		}
+	}
+
+	// Name Field.
+	.ginput_container_name {
+
+		span {
+			flex-grow: 1;
+		}
+	}
+
+	// Address Field.
+	.ginput_container_address {
+
+		label {
+			margin: 0.75rem 0;
+		}
+
+		.address_country {
+			width: calc( 50% - 0.375rem );
+		}
+	}
+
+	// Time Field.
+	.clear-multi {
+
+		.ginput_container {
+			flex-grow: 1;
+			margin-left: 0.75rem;
+		}
+
+		.ginput_container:first-of-type {
+			margin-left: 0;
+		}
+
+		label {
+			margin: 0.75rem 0 0;
+			font-weight: 400;
+		}
+
+		input {
+			width: 100%;
+		}
+
+		.gfield_time_hour i {
+			display: none;
+		}
+	}
+
+	// Submit Button.
+
+	.gform_button {
+		width: 100%;
+	}
+
+	// Utility classes.
+
+	.ginput_full {
+		flex-basis: 100%;
+	}
+
+	.ginput_left,
+	.ginput_right {
+		flex-basis: 45%;
+		flex-grow: 1;
+	}
+
+	.ginput_right,
+	.ginput_container_name span {
+		margin-left: 0.75rem;
+	}
+}

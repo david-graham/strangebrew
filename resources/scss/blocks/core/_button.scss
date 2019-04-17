@@ -1,0 +1,19 @@
+////
+/// Button block.
+///
+/// @group  Blocks
+/// @author David Graham <david.graham@strangebrewdesign.com>
+/// @link   http://www.strangebrewdesign.com
+////
+
+.wp-block-button {
+	margin-bottom: 1.5rem;
+
+	&__link {
+		@extend %button;
+	}
+
+	&.aligncenter {
+		text-align: center;
+	}
+}

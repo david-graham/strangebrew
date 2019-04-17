@@ -1,0 +1,36 @@
+////
+/// Media query page break settings.
+///
+/// @group  Settings
+/// @author David Graham <david.graham@strangebrewdesign.com>
+/// @link   http://www.strangebrewdesign.com
+////
+
+/// Returns a map of page breaks in name-value format.
+///
+/// @since  0.9.0
+/// @access public
+/// @return {map}  Map of page breaks.
+
+@function breaks() {
+
+	@return (
+		desktop : 1150px,
+		tablet : 1024px,
+		medium : 960px,
+		small  : 640px,
+		mobile : 480px
+	);
+}
+
+/// Returns a single page break value by name.
+///
+/// @since  0.9.0
+/// @access public
+/// @param  {string}  $name  Page break name.
+/// @return {string}         Page break value in pixels
+
+@function break( $name ) {
+
+	@return map-get( breaks(), $name );
+}

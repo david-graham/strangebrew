@@ -1,0 +1,44 @@
+////
+/// Comment component.
+///
+/// This is the component for handling individual comments in a comments list.
+///
+/// @group  Components
+/// @author David Graham <david.graham@strangebrewdesign.com>
+/// @link   http://www.strangebrewdesign.com
+////
+
+.comment {
+	border: 1px solid color(primary);
+	border-top-width: rem(6px);
+	margin-bottom: 1.5rem;
+
+	@media ( max-width: break(mobile) ) {
+		padding: 0 0 1.5rem;
+		border-width: 0;
+		border-bottom-width: 1px;
+	}
+
+	&::after {
+		@extend %clearfix;
+	}
+
+	// Full comment text/content.
+	&__content {
+		margin: 1.5rem;
+		font-size: rem(14px);
+		line-height: get-line-height(14px, 24px);
+	}
+
+	// Metadata wrapper.
+	&__meta {
+		margin: rem(18px);
+	}
+
+	// Individual metadata items.
+	&__avatar {
+		float: left;
+		width: 3rem;
+		margin: 0 1rem 1.5rem 0;
+	}
+}

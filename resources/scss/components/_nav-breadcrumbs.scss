@@ -1,0 +1,57 @@
+////
+/// Breadcrumb menu component.
+///
+/// @group  Components
+/// @author David Graham <david.graham@strangebrewdesign.com>
+/// @link   http://www.strangebrewdesign.com
+////
+
+.breadcrumbs {
+	background: color(primary);
+
+	// Breadcrumb title
+	&__title {
+		@extend .screen-reader-text;
+	}
+
+	// Breadcrumb trail
+	&__trail {
+		margin: 0 auto;
+		padding: rem(12px 24px);
+		font-size: rem(15px);
+		line-height: get-line-height(15px, 24px);
+	}
+
+	// Default crumb.
+	&__crumb {
+		display: inline-block;
+		color: rgba(255, 255, 255, 0.75);
+
+		&::after {
+			@extend %icon;
+			content: '\f105';
+			margin: rem(0 12px);
+		}
+
+		&:last-of-type::after {
+			content: none;
+		}
+
+		a {
+			color: #fff;
+		}
+	}
+
+	// Home crumb.
+	&__crumb--home {
+
+		a::before {
+			@extend %icon;
+			content: '\f015';
+		}
+
+		span {
+			@extend .screen-reader-text;
+		}
+	}
+}

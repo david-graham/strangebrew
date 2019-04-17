@@ -1,0 +1,55 @@
+////
+/// Media elements.
+///
+/// @group  Elements
+/// @author David Graham <david.graham@strangebrewdesign.com>
+/// @link   http://www.strangebrewdesign.com
+////
+
+// Images.
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: bottom;
+}
+
+// Figure.
+figure {
+	max-width: 100%;
+	margin-bottom: rem(24px);
+	text-align: center;
+}
+
+// Figcaption.
+figcaption {
+	font-size: rem(14px);
+	font-weight: 600;
+	line-height: get-line-height(14px, 24px);
+	margin-top: rem(12px);
+	text-align: center;
+}
+
+// Emdbed styles.
+.wp-audio-shortcode,
+.wp-video-shortcode,
+audio,
+video,
+object,
+embed,
+iframe {
+	display: block;
+	margin: auto;
+}
+
+// Emoji.
+img.wp-smiley,
+img.emoji {
+	display: inline;
+	box-shadow: none;
+	max-height: 1em;
+	width: 1em;
+	margin: 0 0.07em;
+	padding: 0;
+	border: none;
+	background: transparent;
+}

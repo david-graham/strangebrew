@@ -1,0 +1,40 @@
+////
+/// Heading elements.
+///
+/// @group  Elements
+/// @author David Graham <david.graham@strangebrewdesign.com>
+/// @link   http://www.strangebrewdesign.com
+////
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0 auto 0.75rem;
+	font-family: font-family(secondary);
+	font-weight: 600;
+	line-height: 1.5;
+	color: color(heading-color);
+
+	strong,
+	em {
+		color: color(primary);
+	}
+}
+
+h1 {
+	font-size: 3rem;
+	line-height: 1.25;
+	padding: rem(6px 0);
+}
+
+h2 {
+	font-size: rem(36px);
+	line-height: get-line-height(36px, 48px);
+}
+
+h3 {
+	font-size: 1.5rem;
+}

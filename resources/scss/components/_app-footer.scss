@@ -1,0 +1,45 @@
+////
+/// App footer component.
+///
+/// @group  Components
+/// @author David Graham <david.graham@strangebrewdesign.com>
+/// @link   http://www.strangebrewdesign.com
+////
+
+.app-footer {
+	background-color: #333;
+	padding: 1.5rem 0;
+
+	// Clearing floats.
+	&::after {
+		@extend %clearfix;
+	}
+
+	// Footer wrap.
+	&__wrap {
+		max-width: content-width() + 18rem;
+		margin: auto;
+		box-sizing: content-box;
+		padding: rem(0 18px);
+	}
+
+	// Footer credit.
+	&__credit {
+		margin: 0;
+		float: left;
+
+		@media ( max-width: break(medium) ) {
+			float: none;
+			text-align: center;
+		}
+	}
+
+	// Boxed layout only. Negative margins to account for padding.
+	.layout-boxed & {
+
+		@media ( min-width: break(medium) + 1px ) {
+			margin-left: -2.25rem;
+			margin-right: -2.25rem;
+		}
+	}
+}

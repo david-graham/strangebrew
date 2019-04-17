@@ -1,0 +1,83 @@
+////
+/// Comments component.
+///
+/// This component wraps the entire comments section.
+///
+/// @group  Components
+/// @author David Graham <david.graham@strangebrewdesign.com>
+/// @link   http://www.strangebrewdesign.com
+////
+
+.comments {
+	margin-top: rem(36px);
+	border-top: rem(1px solid color(primary));
+	padding-top: rem(36px);
+
+	// Comments list wrapper.
+	&__list {
+		list-style: none;
+		margin: 0 0 3rem;
+
+		// Children lists (note that WP doesn't have a filter -- the
+		// only way to change this class is with a custom Walker).
+		// @link https://core.trac.wordpress.org/ticket/44923
+		.children {
+			list-style: none;
+			margin: 0 0.75rem;
+		}
+	}
+
+	.comment-respond__reply-title,
+	.comment-respond__notes,
+	.comment-respond__logged-in-as {
+		width: 100%;
+		padding: 0 10%;
+		text-align: center;
+	}
+
+	.comment-respond__reply-title {
+		font-size: rem(30px);
+		line-height: get-line-height(30px, 36px);
+	}
+
+	@media ( min-width: break(small) + 1px ) {
+
+		.comment-respond__form {
+			display: flex;
+			flex-flow: row wrap;
+		}
+
+		.comment-respond__field {
+			flex: 1 100%;
+			margin-bottom: 1rem;
+
+			&--comment {
+				order: 4;
+			}
+
+			&--author,
+			&--email,
+			&--url {
+				flex: 2 0;
+				margin-left: 1rem;
+			}
+
+			&--author {
+				order: 1;
+				margin-left: 0;
+			}
+
+			&--email {
+				order: 2;
+			}
+
+			&--url {
+				order: 3;
+			}
+
+			&--submit {
+				order: 5;
+			}
+		}
+	}
+}

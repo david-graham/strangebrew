@@ -1,0 +1,17 @@
+////
+/// Archives block.
+///
+/// @group  Blocks
+/// @author David Graham <david.graham@strangebrewdesign.com>
+/// @link   http://www.strangebrewdesign.com
+////
+
+.wp-block-archives {
+
+	&-list {
+		list-style-type: none;
+		margin-left: 0;
+	}
+
+	&-dropdown {}
+}

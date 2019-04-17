@@ -1,0 +1,77 @@
+////
+/// Entry component for the 'portfolio_project' custom post type.
+///
+/// @group  Components
+/// @author David Graham <david.graham@strangebrewdesign.com>
+/// @link   http://www.strangebrewdesign.com
+////
+
+// Archive portfolio entry.
+.archive-portfolio_project {
+
+	.entry {
+		text-align: center;
+	}
+}
+
+// Singular portfolio entry.
+.single-portfolio_project {
+
+	.entry__header {
+		padding: rem(12px 0 36px);
+		text-align: left;
+
+		&::after {
+			@extend %clearfix;
+		}
+
+		.entry__title {
+			text-align: left;
+		}
+
+		p {
+			font-size: rem(22px);
+		}
+	}
+
+	.entry__image {
+		float: right;
+		margin: rem(0 6px 1.5rem 3rem);
+		outline: rem(6px solid #ccc);
+
+		@media ( max-width: break(large) ) {
+			max-width: 50%;
+		}
+
+		@media ( max-width: break(small) ) {
+			float: none;
+			max-width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	.project-meta {
+		list-style-type: none;
+		margin-left: 0;
+		font-size: rem(14px);
+		line-height: get-line-height(14px, 24px);
+
+		li {
+			display: inline-block;
+			margin-right: 1.5rem;
+		}
+
+		.project-key {
+			color: color(primary);
+		}
+	}
+
+	.project-link-wrap {
+		margin: 1.5rem auto;
+
+		.project-link {
+			@extend button;
+		}
+	}
+}

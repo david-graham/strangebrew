@@ -1,0 +1,48 @@
+////
+/// Embed block.
+///
+/// @group  Blocks
+/// @author David Graham <david.graham@strangebrewdesign.com>
+/// @link   http://www.strangebrewdesign.com
+////
+
+.wp-block-embed {
+
+	// Image embeds.
+	&.is-type-image {}
+
+	// Audio embeds.
+	&.is-type-audio {}
+
+	// Rich text embeds (text, Twitter, etc.)
+	&.is-type-rich {}
+
+	// Video embeds.
+	&.is-type-video {}
+
+	// Directly target iframes.
+	iframe,
+	object,
+	embed {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		max-width: 100%;
+		height: 100%;
+	}
+
+	// Caption below embedded content.
+	figcaption {}
+
+	&__wrapper {
+		position: relative;
+		padding-bottom: 56.25%;
+		height: 0;
+		overflow: hidden;
+	}
+
+	&.wp-embed-aspect-4-3 &__wrapper {
+		padding-bottom: 75%;
+	}
+}

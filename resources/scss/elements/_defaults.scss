@@ -1,0 +1,152 @@
+////
+/// Default elements.
+///
+/// @group  Elements
+/// @author David Graham <david.graham@strangebrewdesign.com>
+/// @link   http://www.strangebrewdesign.com
+////
+
+// Box Sizing.
+*,
+*::before,
+*::after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+// HTML styles. Everything is in REMs! Change this base value in px to scale
+// everything proportionally.
+html {
+
+	@media ( max-width: break(medium) ) {
+		font-size: 15px;
+	}
+
+	@media ( max-width: break(small) ) {
+		font-size: 14px;
+	}
+}
+
+// Body styles. Note that we're hiding horizontal overflow so that wide images
+// don't overflow.
+body {
+	overflow-x: hidden;
+	font-family: font-family(primary);
+	line-height: 1.5;
+	color: color(text-color);
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+}
+
+// Link styles.
+a {
+	font-weight: 600;
+	color: color(primary);
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+	}
+}
+
+// Paragraphs and list styles.
+p,
+ul,
+ol {
+	margin: 0 0 1.5rem;
+}
+
+ul,
+ol {
+	margin-left: 2rem;
+	text-align: left;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+// Definition lists.
+dl {
+	margin-bottom: 1.5rem;
+}
+
+dt {
+	font-weight: 600;
+}
+
+dd {
+	margin: 0 0 1.5rem 1rem;
+}
+
+// Blockquotes.
+blockquote {
+	margin-bottom: 1.5rem;
+	border-left: rem(2px solid color(primary));
+	padding-left: 1.5rem;
+	font-family: font-family(secondary);
+}
+
+// Horizontal rule.
+hr {
+	margin: 1.5rem auto;
+	border: 0;
+	height: 0;
+	border-top: 1px solid color(primary);
+}
+
+// Pre styles.
+pre {
+	overflow-x: auto;
+	margin-bottom: 1.5rem;
+}
+
+// Address.
+address {
+	margin-bottom: 1.5rem;
+}
+
+// Abbreviation and acronym.
+abbr,
+acronym {
+	border-bottom: rem(2px dotted color(primary));
+	cursor: help;
+}
+
+// Delete (strike).
+s,
+strike,
+del {
+	text-decoration: line-through;
+}
+
+// Mark & insert.
+mark,
+ins {
+	background: rgba(0, 0, 0, 0.125);
+	text-decoration: none;
+}
+
+// Subscript & superscript.
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+

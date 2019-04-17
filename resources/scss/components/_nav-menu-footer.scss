@@ -1,0 +1,45 @@
+////
+/// Nav footer menu component.
+///
+/// @group  Components
+/// @author David Graham <david.graham@strangebrewdesign.com>
+/// @link   http://www.strangebrewdesign.com
+////
+
+.menu--footer {
+	float: right;
+
+	.menu__items {
+		margin: 0;
+		text-align: center;
+	}
+
+	.menu__item {
+		float: left;
+		margin-left: 2rem;
+
+		&:first-child {
+			list-style-type: none;
+		}
+
+		@media ( max-width: break(medium) ) {
+			float: none;
+			display: inline-block;
+			margin: 0 1rem;
+			text-align: center;
+		}
+	}
+
+	.menu__link {
+		color: rgba(255, 255, 255, 0.75);
+
+		&:hover {
+			color: #fff;
+		}
+	}
+
+	@media ( max-width: break(medium) ) {
+		float: none;
+		margin: 1.5rem -1rem 0;
+	}
+}

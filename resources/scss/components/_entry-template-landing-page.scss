@@ -1,0 +1,98 @@
+.page-template-landing-page {
+
+	.entry {
+
+		&__header {
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			max-height: 42rem;
+			height: calc(100vh - 6rem);
+			margin-bottom: 0;
+			border: 0;
+			padding: 0 10%;
+			overflow: hidden;
+			background-color: color(tertiary);
+
+			@media ( min-width: break('desktop') ) {
+				height: 48rem;
+			}
+
+			// Media overlay.
+			.overlay {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				z-index: 1;
+				background-color: rgba(0, 10, 22, 0.5);
+				background-image: url(../img/checkered-pattern.png);
+			}
+
+			// Custom header media.
+			.wp-custom-header img,
+			.wp-custom-header video,
+			.wp-custom-header iframe {
+				position: absolute;
+				top: 0;
+				left: 0;
+				object-fit: cover;
+				width: 100%;
+				height: 100%;
+			}
+
+			// Custom header play/pause button.
+			.wp-custom-header-video-button {
+				display: none;
+			}
+		}
+
+		// Header content area.
+		&__summary {
+			max-width: content-width();
+			z-index: 10;
+			color: rgba(255, 255, 255, 0.75);
+
+			*:last-child {
+				margin-bottom: 0;
+			}
+
+			// Light style headings.
+			h1,
+			h2,
+			h3 {
+				color: #fff;
+			}
+
+			h1 {
+				font-size: rem(54px);
+				line-height: 1.35;
+			}
+
+			// Responsive large font for smaller screens.
+			@media ( max-width: break(medium) ) {
+				h1 {
+					font-size: responsive-font(30, 48, 320, 960);
+				}
+			}
+
+			// SVG Icon
+			.svg-landing {
+				width: 100%;
+				height: auto;
+
+				.svg-shape {
+					fill: color(primary);
+				}
+
+				.svg-icon {
+					@extend %icon;
+					font-size: rem(72px);
+					fill: #fff;
+				}
+			}
+		}
+	}
+}

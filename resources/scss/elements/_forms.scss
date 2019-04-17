@@ -1,0 +1,114 @@
+////
+/// Form elements.
+///
+/// @group  Elements
+/// @author David Graham <david.graham@strangebrewdesign.com>
+/// @link   http://www.strangebrewdesign.com
+////
+
+form {}
+
+fieldset {
+	margin: 0 0 1.5rem;
+	border: rem(1px solid color(primary));
+	padding: 1.5rem 1.5rem 0;
+}
+
+legend {
+	border: rem(1px solid color(primary));
+	padding: 0.75rem 1.5rem;
+	font-size: rem(14px);
+	font-weight: 600;
+}
+
+label {
+	display: block;
+	margin-bottom: rem(12px);
+	cursor: pointer;
+}
+
+label .required {
+	color: color(primary);
+}
+
+input,
+textarea,
+select {
+	display: block;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	display: inline-block;
+}
+
+input[type="file"] {
+	height: 1.5rem;
+}
+
+input[type="number"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+textarea,
+select {
+	display: block;
+	width: 100%;
+	border: 1px solid rgba(0, 0, 0, 0.25);
+	padding: rem(11px);
+	font-family: inherit;
+	font-size: rem(14px);
+	line-height: get-line-height(14px, 24px);
+	background: #fff;
+}
+
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="email"]:focus,
+input[type="month"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+input[type="week"]:focus,
+textarea:focus,
+select:focus {
+	border-color: color(primary);
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+	@extend %button;
+}
+
+.button-alt {
+	background: color(secondary);
+}
+
+input[type="submit"]:focus,
+input[type="submit"]:hover,
+input[type="reset"]:focus,
+input[type="reset"]:hover,
+input[type="button"]:focus,
+input[type="button"]:hover,
+button:focus,
+button:hover
+.media-info-toggle:hover {
+	opacity: 0.9;
+	cursor: pointer;
+}

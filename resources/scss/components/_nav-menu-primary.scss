@@ -1,0 +1,269 @@
+////
+/// Nav primary menu component.
+///
+/// @group  Components
+/// @author David Graham <david.graham@strangebrewdesign.com>
+/// @link   http://www.strangebrewdesign.com
+////
+
+.menu--primary {
+	float: right;
+
+	.menu__title {
+		margin: rem(0 -18px 0 0);
+		width: rem(96px);
+		height: rem(96px);
+	}
+
+	.menu__button {
+		width: 100%;
+		height: 100%;
+		padding: 0;
+	}
+
+	.menu__icon {
+		font-size: 1.5rem;
+	}
+
+	.menu__items,
+	.menu__sub-menu {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.menu__link {
+		display: block;
+		color: #ccc;
+
+		&:hover,
+		&:focus {
+			color: #fff;
+		}
+	}
+
+	// Has children icon.
+	.has-children {
+
+		> .menu__link::after {
+			@extend %icon;
+			content: '\f107';
+			vertical-align: bottom;
+			margin-left: rem(9px);
+		}
+	}
+
+	.menu__sub-menu {
+		font-size: 0.95em;
+		z-index: 999;
+
+		.menu__link {
+			color: rgba(255, 255, 255, 0.75);
+		}
+	}
+}
+
+// Desktop only CSS
+
+@media ( min-width: break(tablet) + 1px ) {
+
+	.menu--primary {
+
+		// Hide the mobile menu button.
+		.menu__title {
+			display: none;
+		}
+
+		// Main ul element.
+		.menu__items {
+
+			// First level list items.
+			> .menu__item {
+				position: relative;
+				float: left;
+				margin-left: 2.25rem;
+
+				&:first-child {
+					margin-left: 0;
+				}
+
+				// First level menu links.
+				> .menu__link {
+					padding: rem(36px 0);
+				}
+
+				// First level submenu.
+				> .menu__sub-menu {
+					position: absolute;
+					right: 999em;
+					width: 18rem;
+					background: color(primary);
+					box-shadow: inset 1px -1px 0 0 rgba(255, 255, 255, 0.325), 0 1px 6px rgba(0, 0, 0, 0.25);
+				}
+
+				// Make submenu visible.
+				> .menu__sub-menu:focus-within,
+				&.has-children:hover > .menu__sub-menu {
+					top: rem(84px);
+					right: 0;
+				}
+
+				// Submenu pointer CSS
+				> .menu__sub-menu::after {
+					position: absolute;
+					top: rem(-24px);
+					right: rem(30px);
+					border: solid transparent;
+					content: " ";
+					height: 0;
+					width: 0;
+					pointer-events: none;
+					border-bottom-color: color(primary);
+					border-width: rem(12px);
+					margin-left: rem(-12px);
+				}
+			}
+
+			// Submenu list items.
+			.menu__sub-menu .menu__item {
+				border-top: 1px solid rgba(255, 255, 255, 0.25);
+
+				&:first-child {
+					border-top: 0;
+				}
+
+				a:hover,
+				a:focus {
+					background: rgba(255, 255, 255, 0.1);
+				}
+
+				// Submenu links.
+				.menu__link {
+					padding: 1rem;
+					line-height: 1.5;
+
+					&:hover {
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Tablet CSS
+
+@media ( max-width: break(tablet) ) {
+
+	.app-below__header {
+		position: relative;
+		transition: normal;
+	}
+
+	.menu-open {
+		overflow-y: scroll;
+		width: 100%;
+
+		.app-below__header {
+			position: fixed;
+			z-index: 90;
+			height: 100%;
+			left: 0;
+			right: 0;
+		}
+
+		.site__overlay {
+			width: 100%;
+			height: 100%;
+			z-index: 90;
+			position: absolute;
+			background: rgba( 255, 255, 255, 0.75 );
+		}
+	}
+
+	.menu--primary {
+
+		.menu__button {
+			background: transparent;
+			box-shadow: none;
+
+			&:hover,
+			&:focus {
+				background: color(primary);
+			}
+
+			&--selected .menu__icon::before {
+				content: '\f00d';
+			}
+		}
+
+		.menu__items {
+			display: block;
+			visibility: hidden;
+			position: fixed;
+			top: rem(96px);
+			bottom: 0;
+			right: -50vw;
+			z-index: 999999;
+			overflow-y: auto;
+			overflow-x: hidden;
+			width: 50vw;
+			transition: all 0.4s ease-in-out 0s;
+			background: color(tertiary);
+
+			&--visible {
+				visibility: visible;
+				right: 0;
+			}
+		}
+
+		.menu__item {
+			display: block;
+			font-size: editor-font-size(medium);
+		}
+
+		.menu__link {
+			padding: 1rem;
+			border-top: 1px solid rgba(255, 255, 255, 0.125);
+
+			&:hover,
+			&:focus {
+				background: rgba(255, 255, 255, 0.05);
+			}
+		}
+
+		.menu__sub-menu {
+			background: rgba(0, 0, 0, 0.05);
+		}
+	}
+}
+
+// Mobile CSS
+
+@media ( max-width: 540px ) {
+
+	.menu--primary .menu__items {
+		width: 100%;
+		right: -100%;
+
+		&--visible {
+			right: 0;
+		}
+	}
+}
+
+// Admin Bar CSS
+
+.admin-bar {
+
+	.menu__items {
+		top: calc( 6rem + 32px );
+	}
+
+	@media ( max-width: 783px ) {
+
+		.menu__items {
+			top: calc( 6rem + 46px );
+		}
+	}
+}

@@ -1,0 +1,27 @@
+////
+/// Embed elements.
+///
+/// @group  Elements
+/// @author David Graham <david.graham@strangebrewdesign.com>
+/// @link   http://www.strangebrewdesign.com
+////
+
+.embed__wrapper {
+	position: relative;
+	margin-bottom: 1.5rem;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+
+	// Directly target iframes.
+	iframe,
+	object,
+	embed {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		max-width: 100%;
+		height: 100%;
+	}
+}

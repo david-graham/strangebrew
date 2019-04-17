@@ -1,0 +1,16 @@
+////
+/// Custom functions.
+///
+/// @group  Tools
+/// @author David Graham <david.graham@strangebrewdesign.com>
+/// @link   http://www.strangebrewdesign.com
+////
+
+// Returns a responsive font size with a minimum and maximum font size.
+@function responsive-font($min-font-size, $max-font-size, $min-viewport-width: 360, $max-viewport-width: 1024) {
+	@return calc( #{$min-font-size}px + (#{$max-font-size} - #{$min-font-size}) * (100vw - #{$min-viewport-width}px) / (#{$max-viewport-width} - #{$min-viewport-width}));
+}
+
+@function get-line-height($font-size, $line-height) {
+	@return $line-height / $font-size;
+}

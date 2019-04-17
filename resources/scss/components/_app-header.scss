@@ -1,0 +1,93 @@
+////
+/// App header component.
+///
+/// @group  Components
+/// @author David Graham <david.graham@strangebrewdesign.com>
+/// @link   http://www.strangebrewdesign.com
+////
+
+.app-header {
+	background: color(secondary);
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
+
+	// Clearing floats.
+	&::after {
+		@extend %clearfix;
+	}
+
+	// Header wrap.
+	&__wrap {
+		max-width: content-width() + 24rem;
+		margin: auto;
+		box-sizing: content-box;
+		padding: rem(0 18px);
+	}
+
+	// Wrapper around the title and description.
+	&__branding {
+		float: left;
+		padding: rem(18px 0);
+		width: rem(300px);
+		font-family: font-family(secondary);
+
+		@media ( max-width: break(small) ) {
+			width: rem(240px);
+		}
+	}
+
+	// Icon link.
+	&__icon-link {
+		float: left;
+		margin-right: 1rem;
+		background: color(primary);
+		color: #fff;
+		width: rem(60px);
+		font-size: rem(36px);
+		line-height: rem(60px);
+		text-align: center;
+	}
+
+	// The site title.
+	&__title {
+		margin: 0;
+		padding: 0;
+		font-size: 1.5rem;
+		font-weight: 700;
+		line-height: rem(36px);
+
+		@media ( max-width: break(small) ) {
+			padding: 0.75rem 0;
+		}
+	}
+
+	// Site title link.
+	&__title-link {
+		color: #fff;
+	}
+
+	// The site description.
+	&__description {
+		color: #ccc;
+		margin-top: rem(-3px);
+
+		@media ( max-width: break(small) ) {
+			display: none;
+		}
+	}
+}
+
+// Sticky Header.
+
+:not(.admin-bar).sticky-header {
+
+	.app-header {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 999;
+	}
+
+	.app-below__header {
+		padding-top: rem(96px);
+	}
+}

@@ -1,0 +1,20 @@
+////
+/// App component.
+///
+/// This is the wrapper for the entire page layout.
+///
+/// @group  Components
+/// @author David Graham <david.graham@strangebrewdesign.com>
+/// @link   http://www.strangebrewdesign.com
+////
+
+.app {
+
+	.layout-boxed:not(.layout-wide) &-below__header {
+
+		@media ( min-width: break(medium) + 1px ) {
+			padding-left: 1.5rem;
+			padding-right: 1.5rem;
+		}
+	}
+}

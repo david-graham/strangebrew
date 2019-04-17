@@ -1,0 +1,18 @@
+{
+  "from": {
+    "Name": "Base",
+    "Description": "Base is a base theme built using Hybrid Core 5 and Mythic",
+    "Uri": "http://www.strangebrewdesign.com",
+    "Author": "David Graham",
+    "AuthorEmail": "david.graham@strangebrewdesign.com",
+    "AuthorUri": "http://www.strangebrewdesign.com"
+  },
+  "to": {
+    "Name": "Strangebrew",
+    "Description": "Strangebrew is a modern theme built using the Hybrid Core 5 framework.",
+    "Uri": "http://www.strangebrewdesign.com",
+    "Author": "David Graham",
+    "AuthorEmail": "david.graham@strangebrewdesign.com",
+    "AuthorUri": "http://www.strangebrewdesign.com"
+  }
+}

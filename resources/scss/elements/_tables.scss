@@ -1,0 +1,33 @@
+////
+/// Table elements.
+///
+/// @group  Elements
+/// @author David Graham <david.graham@strangebrewdesign.com>
+/// @link   http://www.strangebrewdesign.com
+////
+
+table {
+	margin: rem(24px) auto;
+	border: rem(1px solid color(primary));
+	border-left: none;
+	border-spacing: 0;
+
+	th {
+		background: color(primary);
+		color: #fff;
+
+		a {
+			color: #fff;
+		}
+	}
+
+	th,
+	td {
+		padding: rem(11px);
+		border-left: rem(1px solid color(primary));
+	}
+
+	.even {
+		background: rgba(0, 0, 0, 0.05);
+	}
+}

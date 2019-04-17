@@ -1,0 +1,100 @@
+////
+/// Entry component for posts & pages, singular and plural.
+///
+/// @group  Components
+/// @author David Graham <david.graham@strangebrewdesign.com>
+/// @link   http://www.strangebrewdesign.com
+////
+
+// Archive entry.
+.plural .entry {
+
+	// Entry image.
+	img {
+		width: 100%;
+		margin-bottom: 1.5rem;
+	}
+
+	// SVG container.
+	.svg-featured {
+		display: block;
+		width: 100%;
+		height: auto;
+		margin: 0 auto 1.5rem;
+		background: #ccc;
+	}
+
+	// SVG focus/hover.
+	a:focus .svg-featured,
+	a:hover .svg-featured {
+		background: color(primary);
+	}
+
+	// SVG shape.
+	.svg-featured .svg-shape {
+		fill: color(primary);
+	}
+
+	// SVG icon.
+	.svg-featured .svg-icon {
+		@extend %icon;
+		font-size: rem(60px);
+		line-height: 1;
+		fill: #fff;
+	}
+
+	// Entry title.
+	&__title {
+		margin: 0;
+		padding: rem(3px 0);
+		font-size: rem(24px);
+		line-height: get-line-height(24px, 30px);
+	}
+
+	// Entry title permalink.
+	&__permalink {
+		color: color(heading-color);
+	}
+
+	// Meta wrappers.
+	&__byline {
+		font-size: rem(14px);
+		line-height: get-line-height(14px, 24px);
+	}
+}
+
+// Singular entry.
+.single .entry {
+
+	&::after {
+		@extend %clearfix;
+	}
+
+	// Header wrapper.
+	&__header {
+		margin-bottom: rem(48px);
+		border-bottom: 1px solid color(primary);
+		padding-bottom: rem(24px);
+		text-align: center;
+	}
+
+	&__title {
+		text-align: center;
+	}
+
+	&__summary {
+		font-family: font-family(secondary);
+		font-size: rem(24px);
+		line-height: rem(36px);
+	}
+
+	&__byline {
+		margin-bottom: rem(24px);
+		font-size: rem(18px);
+	}
+
+	&__footer {
+		margin: 1.5rem auto;
+		text-align: center;
+	}
+}

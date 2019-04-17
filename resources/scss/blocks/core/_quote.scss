@@ -1,0 +1,18 @@
+////
+/// Quote block.
+///
+/// @group  Blocks
+/// @author David Graham <david.graham@strangebrewdesign.com>
+/// @link   http://www.strangebrewdesign.com
+////
+
+.wp-block-quote {
+
+	p {}
+
+	cite {}
+
+	&.is-large {
+		font-size: 1.5rem;
+	}
+}
