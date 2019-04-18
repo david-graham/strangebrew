@@ -18,15 +18,6 @@
 		flex: 1;
 		padding: 0 2.5%;
 	}
-
-	// Remove outermost padding.
-	&:not(.alignfull) .wp-block-column:first-of-type {
-		padding-left: 0;
-	}
-
-	&:not(.alignfull) .wp-block-column:last-of-type {
-		padding-right: 0;
-	}
 }
 
 // Editor specific styling. Make sure columns span correctly.
