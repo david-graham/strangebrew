@@ -21,6 +21,7 @@ h6 {
 
 	strong,
 	em {
+		font-weight: 600;
 		color: color(primary);
 	}
 }
@@ -39,7 +40,7 @@ h2 {
 
 h3 {
 	font-size: rem(24px);
-	line-height: get-line-height(25px, 36px);
+	line-height: get-line-height(24px, 36px);
 }
 
 h4 {
