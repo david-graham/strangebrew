@@ -38,7 +38,7 @@
 	// SVG icon.
 	.svg-featured .svg-icon {
 		@extend %icon;
-		font-size: rem(60px);
+		font-size: rem(48px);
 		line-height: 1;
 		fill: #fff;
 	}
@@ -75,7 +75,6 @@
 		margin-bottom: rem(48px);
 		border-bottom: 1px solid color(primary);
 		padding-bottom: rem(24px);
-		text-align: center;
 	}
 
 	&__title {

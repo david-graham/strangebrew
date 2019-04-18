@@ -241,11 +241,13 @@ add_action( 'init', function() {
 add_action( 'init', function() {
 
 	// Set the `post-thumbnail` size.
-	set_post_thumbnail_size( 226, 132, true );
+	set_post_thumbnail_size( 480, 360, true );
 
 	// Register custom image sizes.
-	add_image_size( 'strangebrew-medium', 748, 420, true );
-	add_image_size( 'strangebrew-ccp', 480, 360, true );
+	add_image_size( 'strangebrew-large', 1000, 480, true );
+	add_image_size( 'strangebrew-medium', 750, 360, true );
+	add_image_size( 'strangebrew-small', 500, 240, true );
+	add_image_size( 'strangebrew-thumbnail', 480, 360, true );
 
 }, 5 );
 

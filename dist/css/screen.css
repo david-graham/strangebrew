@@ -699,7 +699,7 @@ button:hover .media-info-toggle:hover,
 	fill: #f26419;
 }
 .plural .entry .svg-featured .svg-icon {
-	font-size: 3.75rem;
+	font-size: 3rem;
 	line-height: 1;
 	fill: #fff;
 }
@@ -721,7 +721,6 @@ button:hover .media-info-toggle:hover,
 	margin-bottom: 3rem;
 	border-bottom: 1px solid #f26419;
 	padding-bottom: 1.5rem;
-	text-align: center;
 }
 .single .entry__title {
 	text-align: center;

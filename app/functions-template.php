@@ -54,15 +54,12 @@ function display_featured_image() {
  */
 function get_featured_image() {
 
-	$size = 'strangebrew-medium';
+	$size = 'strangebrew-thumbnail';
 
-	if ( is_singular() )
-		$size = 'featured';
+	if ( is_singular() && ! is_singular( 'portfolio_project' ) )
+		$size = 'strangebrew-medium';
 
-	if ( is_singular( 'portfolio_project' ) )
-		$size = 'portfolio-featured';
-
-	$image = get_the_post_thumbnail( get_the_ID(), $size );
+	$image = get_the_post_thumbnail( get_the_ID(), $size, [ 'class' => 'entry__image' ] );
     
 	return $image ? $image : get_featured_fallback();
 }
@@ -82,14 +79,12 @@ function get_featured_fallback() {
     $svg = sprintf(
 		'<div class="featured-media"><a href="%s">
 			<?xml version="1.0"?>
-			<svg class="svg-featured" width="%s" height="%s" viewBox="0 0 748 420">
-				<rect class="svg-shape" x="299" y="135" width="150" height="150" transform="rotate(45 374 210)" />
-				<text class="svg-icon" x="374" y="210" text-anchor="middle" alignment-baseline="central" dominant-baseline="central">%s</text>
+			<svg class="svg-featured" width="480" height="360" viewBox="0 0 480 360">
+				<rect class="svg-shape" x="180" y="120" width="120" height="120" transform="rotate(45 240 180)" />
+				<text class="svg-icon" x="240" y="180" text-anchor="middle" alignment-baseline="central" dominant-baseline="central">%s</text>
 			</svg>
 		</a></div>',
 		esc_url( get_permalink() ),
-		'748px',
-		'420px',
 		get_featured_icon()
 	);
 

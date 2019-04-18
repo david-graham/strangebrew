@@ -2,7 +2,7 @@
 
 	<header class="entry__header">
 
-		<?php the_post_thumbnail( 'strangebrew-ccp', [ 'class' => 'entry__image' ] ) ?>
+		<?php Strangebrew\display_featured_image(); ?>
 
 		<?php Hybrid\Post\display_title() ?>
 
