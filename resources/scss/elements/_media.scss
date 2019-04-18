@@ -22,10 +22,8 @@ figure {
 
 // Figcaption.
 figcaption {
-	font-size: rem(14px);
-	font-weight: 600;
-	line-height: get-line-height(14px, 24px);
-	margin-top: rem(12px);
+	font-family: font-family(secondary);
+	margin-top: rem(24px);
 	text-align: center;
 }
 

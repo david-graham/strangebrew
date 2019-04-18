@@ -26,6 +26,7 @@
 	&__crumb {
 		display: inline-block;
 		color: rgba(255, 255, 255, 0.75);
+		font-weight: 400;
 
 		&::after {
 			@extend %icon;

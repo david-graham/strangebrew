@@ -14,8 +14,9 @@ h5,
 h6 {
 	margin: 0 auto 0.75rem;
 	font-family: font-family(secondary);
-	font-weight: 600;
+	font-weight: 700;
 	line-height: 1.5;
+	letter-spacing: -0.01em;
 	color: color(heading-color);
 
 	strong,
@@ -25,16 +26,33 @@ h6 {
 }
 
 h1 {
-	font-size: 3rem;
-	line-height: 1.25;
+	font-size: rem(45px);
+	line-height: get-line-height(45, 48);
 	padding: rem(6px 0);
 }
 
 h2 {
-	font-size: rem(36px);
-	line-height: get-line-height(36px, 48px);
+	font-size: rem(30px);
+	padding: rem(3px 0);
+	line-height: get-line-height(30px, 42px);
 }
 
 h3 {
-	font-size: 1.5rem;
+	font-size: rem(24px);
+	line-height: get-line-height(25px, 36px);
+}
+
+h4 {
+	padding: rem(3px 0);
+	font-size: rem(21px);
+	font-weight: 400;
+	line-height: get-line-height(21px, 30px);
+}
+
+h5 {
+	font-family: font-family(primary);
+	font-size: rem(16px);
+	line-height: get-line-height(16px, 30px);
+	letter-spacing: 0.01em;
+	text-transform: uppercase;
 }

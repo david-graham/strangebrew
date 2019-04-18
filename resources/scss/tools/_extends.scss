@@ -28,12 +28,13 @@
 	display: inline-block;
 	border: none;
 	padding: rem(12px 1rem);
+	background: color(primary);
+	box-shadow: rem(inset 0 -3px rgba(0, 0, 0, 0.25));
 	font-family: font-family(secondary);
 	font-size: rem(16px);
 	font-weight: 600;
 	color: #fff;
 	line-height: 1.5;
+	text-transform: uppercase;
 	letter-spacing: rem(1px);
-	background: color(primary);
-	box-shadow: rem(inset 0 -3px rgba(0, 0, 0, 0.25));
 }

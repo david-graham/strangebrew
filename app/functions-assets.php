@@ -47,12 +47,11 @@ add_action( 'wp_enqueue_scripts', function() {
 	// Enqueue theme fonts.
 	\Hybrid\Font\enqueue( 'strangebrew', [
 		'family' => [
-			'roboto'      => 'Roboto:400,400i,700,700i',
-			'roboto-slab' => 'Roboto+Slab:400,700'
+			'roboto'      => 'Roboto:300,400,500,700',
+			'roboto-slab' => 'Roboto+Slab:300,400,700'
 		],
 		'subset' => [
-			'latin',
-			'latin-ext'
+			'latin'
 		]
 	] );
 
