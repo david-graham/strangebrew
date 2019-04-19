@@ -49,20 +49,27 @@
 		grid-template-areas: "media-text-content media-text-media";
 	}
 
-	// Add padding for .alignfull to pad text.
-	&.alignfull &__content {
-		padding: 10%;
-	}
-
-	// Remove column gap as padding takes care of whitespace.
+	// Media text blocks with `.alignfull` class have a different style.
 	&.alignfull {
+
+		// Whitespace between viewport and text.
+		.wp-block-media-text__content {
+			padding: 10%;
+		}
+
+		// Remove column gap as padding takes care of whitespace.
 		column-gap: 0;
 		row-gap: 0;
-	}
 
-	// Make img cover column when aligned to full width.
-	&.alignfull .wp-block-media-text__media img {
-		object-fit: cover;
-		height: 100%;
+		// `object-fit` won't work when aligned center.
+		.wp-block-media-text__media {
+			align-self: stretch;
+		}
+
+		// Make image cover column space.
+		.wp-block-media-text__media img {
+			object-fit: cover;
+			height: 100%;
+		}
 	}
 }
