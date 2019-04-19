@@ -9,36 +9,51 @@
 ////
 
 .comment {
-	border: 1px solid color(primary);
-	border-top-width: rem(6px);
-	margin-bottom: 1.5rem;
+	background: #eee;
+	margin-top: 0.75rem;
+	border-left: rem(6px solid color(primary));
+	padding: 1.125rem 1.125rem 0;
 
-	@media ( max-width: break(mobile) ) {
-		padding: 0 0 1.5rem;
-		border-width: 0;
-		border-bottom-width: 1px;
+	.comments__list > & {
+		box-shadow: -1px 2px 2px rgba(0, 0, 0, 0.25);
 	}
 
 	&::after {
 		@extend %clearfix;
 	}
 
-	// Full comment text/content.
-	&__content {
-		margin: 1.5rem;
+	// Metadata.
+	&__meta {
+
+		a {
+			font-weight: 300;
+		}
+	}
+
+	&__content,
+	&__meta {
 		font-size: rem(14px);
 		line-height: get-line-height(14px, 24px);
 	}
 
-	// Metadata wrapper.
-	&__meta {
-		margin: rem(18px);
-	}
-
-	// Individual metadata items.
+	// Avatar.
 	&__avatar {
 		float: left;
 		width: 3rem;
 		margin: 0 1rem 1.5rem 0;
+	}
+
+	// Author.
+	&__author,
+	&__author a {
+		font-size: rem(16px);
+		font-weight: 700;
+		line-height: get-line-height(16px, 24px);
+	}
+
+	// Full comment text/content.
+	&__content {
+		margin: 0 1.5rem 1.5rem;
+		padding: 1rem 1rem 0;
 	}
 }

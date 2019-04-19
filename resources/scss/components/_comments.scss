@@ -10,6 +10,14 @@
 
 .comments {
 
+	// Closed comments.
+	&__closed {
+
+		.single-page & {
+			display: none;
+		}
+	}
+
 	// Comments list wrapper.
 	&__list {
 		list-style: none;
@@ -49,6 +57,16 @@
 		line-height: get-line-height(30px, 36px);
 	}
 
+	.comment-respond__field--cookies {
+		display: flex;
+		padding: 0.75rem;
+		background: #eee;
+
+		label {
+			margin: 0 0 0 0.5rem;
+		}
+	}
+
 	@media ( min-width: break(small) + 1px ) {
 
 		.comment-respond__form {
@@ -63,7 +81,6 @@
 			&--comment {
 				order: 4;
 			}
-
 			&--author,
 			&--email,
 			&--url {

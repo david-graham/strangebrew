@@ -57,8 +57,8 @@
 
 	// Meta wrappers.
 	&__byline {
-		font-size: rem(14px);
-		line-height: get-line-height(14px, 24px);
+		font-size: rem(15px);
+		line-height: get-line-height(15px, 24px);
 	}
 }
 
@@ -78,7 +78,6 @@
 	}
 
 	&__summary {
-		padding: rem(6px 0);
 		font-family: font-family(secondary);
 		font-size: rem(22px);
 		line-height: get-line-height(22px, 36px);

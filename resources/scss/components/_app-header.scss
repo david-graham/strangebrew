@@ -29,8 +29,6 @@
 		float: left;
 		padding: rem(18px 0);
 		width: rem(300px);
-		font-size: rem(15px);
-		line-height: get-line-height(15, 24);
 	}
 
 	// Icon link.
@@ -66,9 +64,9 @@
 
 	// The site description.
 	&__description {
-		color: #ccc;
-		font-weight: 400;
-		margin-top: rem(-4px);
+		font-weight: 300;
+		color: rgba(255, 255, 255, 0.75);
+		margin-top: rem(-3px);
 
 		@media ( max-width: break(small) ) {
 			display: none;
