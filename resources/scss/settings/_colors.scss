@@ -16,13 +16,11 @@
 @function colors() {
 
 	$colors : (
-		white : #fff,
-		black : #000,
-		primary : #f26419,
-		secondary : #00375d,
-		tertiary : #000a16,
-		text-color : #666,
-		heading-color : #333
+		primary			: #f26419,
+		secondary		: #00375d,
+		tertiary		: #000a16,
+		text-color		: #666,
+		heading-color	: #333
 	);
 
 	@return map-merge( $colors, block-colors() );
@@ -39,10 +37,10 @@
 @function block-colors() {
 
 	@return (
-		charcoal  : #282c34,
-		regent    : #8c97a7,
-		husk      : #b9a364,
-		red-stage : #b15330
+		primary		: #f26419,
+		secondary	: #00375d,
+		tertiary	: #000a16,
+		light-grey	: #eeeeee
 	);
 }
 

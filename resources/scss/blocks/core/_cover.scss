@@ -39,7 +39,7 @@
 	@for $dim from 1 through 10 {
 
 		&.has-background-dim-#{ $dim * 10 }::before {
-			background-color: rgba( color( black ), $dim * 0.1 );
+			background-color: rgba( #000, $dim * 0.1 );
 		}
 	}
 

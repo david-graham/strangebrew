@@ -80,24 +80,24 @@ add_action( 'after_setup_theme', function() {
 	// `resources/scss/settings/_colors.scss` file.
 	add_theme_support( 'editor-color-palette', [
 		[
-			'name'  => __( 'Charcoal', 'strangebrew' ),
-			'slug'  => 'charcoal',
-			'color' => '#282c34'
+			'name'  => __( 'Primary', 'strangebrew' ),
+			'slug'  => 'primary',
+			'color' => '#f26419'
 		],
 		[
-			'name'  => __( 'Regent', 'strangebrew' ),
-			'slug'  => 'regent',
-			'color' => '#8c97a7',
+			'name'  => __( 'Secondary', 'strangebrew' ),
+			'slug'  => 'secondary',
+			'color' => '#00375d',
 		],
 		[
-			'name'  => __( 'Husk', 'strangebrew' ),
-			'slug'  => 'husk',
-			'color' => '#B9A364',
+			'name'  => __( 'Tertiary', 'strangebrew' ),
+			'slug'  => 'tertiary',
+			'color' => '#000a16',
 		],
 		[
-			'name'  => __( 'Red Stage', 'strangebrew' ),
-			'slug'  => 'red-stage',
-			'color' => '#b15330',
+			'name'  => __( 'Light Grey', 'strangebrew' ),
+			'slug'  => 'light-grey',
+			'color' => '#eeeeee',
 		]
 	] );
 
