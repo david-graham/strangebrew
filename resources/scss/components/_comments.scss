@@ -9,14 +9,12 @@
 ////
 
 .comments {
-	margin-top: rem(36px);
-	border-top: rem(1px solid color(primary));
-	padding-top: rem(36px);
 
 	// Comments list wrapper.
 	&__list {
 		list-style: none;
-		margin: 0 0 3rem;
+		max-width: content-width() - 6rem;
+		margin: 0 auto 3rem;
 
 		// Children lists (note that WP doesn't have a filter -- the
 		// only way to change this class is with a custom Walker).
@@ -25,6 +23,17 @@
 			list-style: none;
 			margin: 0 0.75rem;
 		}
+	}
+
+	&__title {
+		margin-bottom: 1.5rem;
+		text-align: center;
+	}
+
+	.comment-respond {
+		margin-top: rem(36px);
+		border-top: rem(1px solid color(primary));
+		padding-top: rem(36px);
 	}
 
 	.comment-respond__reply-title,

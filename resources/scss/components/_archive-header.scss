@@ -16,11 +16,11 @@
 
 	&__description {
 		border-left: rem(6px solid color(primary));
-		padding: 1.5rem 2rem;
+		padding: 1.125rem 2rem;
 		background: #eee;
 		font-family: font-family(secondary);
-		font-size: rem(24px);
-		line-height: rem(36px);
+		font-size: rem(22px);
+		line-height: get-line-height(22px, 36px);
 		box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
 
 		@media ( max-width: break(small) ) {

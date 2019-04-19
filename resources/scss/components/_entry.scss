@@ -73,23 +73,24 @@
 	&__header {
 		margin-bottom: rem(48px);
 		border-bottom: 1px solid color(primary);
-		padding-bottom: rem(24px);
+		padding: rem(12px 0 24px);
 		text-align: center;
 	}
 
 	&__summary {
+		padding: rem(6px 0);
 		font-family: font-family(secondary);
 		font-size: rem(22px);
-		line-height: rem(36px);
+		line-height: get-line-height(22px, 36px);
 	}
 
 	&__byline {
-		margin-bottom: rem(24px);
+		margin-bottom: 1.5rem;
 		font-size: rem(18px);
+		line-height: get-line-height(18px, 24px);
 	}
 
 	&__footer {
-		margin: 1.5rem auto;
-		text-align: center;
+		margin-bottom: 1.5rem;
 	}
 }

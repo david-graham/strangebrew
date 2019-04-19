@@ -68,7 +68,7 @@
 
 			h1 {
 				font-size: rem(54px);
-				line-height: 1.35;
+				line-height: get-line-height(54px, 72px);
 			}
 
 			// Responsive large font for smaller screens.
