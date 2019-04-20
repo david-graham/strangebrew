@@ -40,9 +40,9 @@ function sep( $sep = '' ) {
  * @access public
  * @return void
  */
-function display_featured_image() {
+function display_featured_image( $args = [] ) {
 
-	echo get_featured_image(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	echo get_featured_image( $args ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 }
 
 /**
@@ -50,16 +50,21 @@ function display_featured_image() {
  *
  * @since  0.9.0
  * @access public
+ * @param  array $args
  * @return string
  */
-function get_featured_image() {
+function get_featured_image( $args = [] ) {
 
-	$size = 'strangebrew-thumbnail';
+	$args = wp_parse_args( $args, [
+		'size' => ( is_singular() ) ? 'post-thumbnail' : 'strangebrew-medium',
+		'class' => 'entry__image'
+	] );
 
-	if ( is_singular() && ! is_singular( 'portfolio_project' ) )
-		$size = 'strangebrew-medium';
-
-	$image = get_the_post_thumbnail( get_the_ID(), $size, [ 'class' => 'entry__image' ] );
+	$image = get_the_post_thumbnail( 
+		get_the_ID(), 
+		esc_attr( $args['size'] ), 
+		[ 'class' => esc_attr( $args['class'] ) ] 
+	);
     
 	return $image ? $image : get_featured_fallback();
 }
@@ -79,7 +84,7 @@ function get_featured_fallback() {
     $svg = sprintf(
 		'<div class="featured-media"><a href="%s">
 			<?xml version="1.0"?>
-			<svg class="svg-featured" width="480" height="360" viewBox="0 0 480 360">
+			<svg class="svg-featured" width="480" height="300" viewBox="0 0 480 360">
 				<rect class="svg-shape" x="180" y="120" width="120" height="120" transform="rotate(45 240 180)" />
 				<text class="svg-icon" x="240" y="180" text-anchor="middle" alignment-baseline="central" dominant-baseline="central">%s</text>
 			</svg>
@@ -136,7 +141,7 @@ function get_featured_icon() {
  */
 function display_content_before_more( array $args = [] ) {
 
-	echo apply_filters( 'the_content', render_content_before_more( $args ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	echo render_content_before_more( $args ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 }
 
 /**
@@ -167,7 +172,10 @@ function render_content_before_more( array $args = [] ) {
 	
 		// Split the content into $content['main] and $content['extended'].
 		$content = get_extended( $post->post_content );
+
+		// Apply `the_content()` filter to add p tags etc.
+		$content = apply_filters( 'the_content', $content['main'] );
 	
-		return wp_kses_post( $args['before'] ) . $content['main'] . wp_kses_post( $args['after'] );
+		return $args['before'] . $content . $args['after'];
 	}
 }
