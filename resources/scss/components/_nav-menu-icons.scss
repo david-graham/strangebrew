@@ -2009,10 +2009,12 @@
 // Menu Icon CSS
 .menu__items {
 
+	// Stop FontAwesome from adding icons to the list element.
 	.menu__item::before {
 		content: '';
 	}
 
+	// Display icon on the link within.
 	.menu__item a::before {
 		@extend %icon;
 		margin-right: rem(9px);
@@ -2020,8 +2022,12 @@
 		top: rem(-1px);
 	}
 
+	// Highlight active menu item.
+	.menu__item--current > a::before,
+	.menu__item--parent > a::before,
+	.menu__item--ancestor > a::before,
 	.menu__item a:focus::before,
-	.menu__item:hover a::before {
+	.menu__item a:hover::before {
 		color: color(primary);
 	}
 }

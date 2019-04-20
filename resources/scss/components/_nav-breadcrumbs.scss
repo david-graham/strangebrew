@@ -20,12 +20,13 @@
 		padding: rem(12px 24px);
 		font-size: rem(15px);
 		line-height: get-line-height(15px, 24px);
+		text-align: center;
 	}
 
 	// Default crumb.
 	&__crumb {
 		display: inline-block;
-		color: rgba(255, 255, 255, 0.75);
+		color: rgba(#fff, 75%);
 		font-weight: 400;
 
 		&::after {

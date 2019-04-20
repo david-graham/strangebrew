@@ -13,21 +13,14 @@
 	margin-top: 0.75rem;
 	border-left: rem(6px solid color(primary));
 	padding: 1.125rem 1.125rem 0;
+	font-weight: 400;
 
 	.comments__list > & {
-		box-shadow: -1px 2px 2px rgba(0, 0, 0, 0.25);
+		box-shadow: rem(-1px 2px 2px rgba(#000, 25%));
 	}
 
 	&::after {
 		@extend %clearfix;
-	}
-
-	// Metadata.
-	&__meta {
-
-		a {
-			font-weight: 300;
-		}
 	}
 
 	&__content,
@@ -44,14 +37,15 @@
 	}
 
 	// Author.
-	&__author,
-	&__author a {
+	&__author a,
+	&__author {
 		font-size: rem(16px);
 		font-weight: 700;
+		color: color(heading);
 		line-height: get-line-height(16px, 24px);
 	}
 
-	// Full comment text/content.
+	// Comment text/content.
 	&__content {
 		margin: 0 1.5rem 1.5rem;
 		padding: 1rem 1rem 0;

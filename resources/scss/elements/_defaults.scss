@@ -40,13 +40,8 @@ body {
 	font-family: font-family(primary);
 	font-weight: 300;
 	line-height: 1.5;
-	color: color(text-color);
+	color: color(text);
 	word-wrap: break-word;
-}
-
-// Strong element.
-strong {
-	font-weight: 400;
 }
 
 // Links.
@@ -61,25 +56,22 @@ a {
 	}
 }
 
-// Paragraphs and list styles.
-p,
-ul,
-ol {
+// Paragraphs.
+p {
 	margin: 0 0 1.5rem;
 }
 
+// List styles.
 ul,
 ol {
-	margin-left: 2rem;
-	text-align: left;
+	margin: 0 0 1.5rem 2rem;
 }
 
 ul ul,
 ul ol,
 ol ol,
 ol ul {
-	margin-top: 0;
-	margin-bottom: 0;
+	margin: 0 0 0 2rem;
 }
 
 // Definition lists.
@@ -115,6 +107,9 @@ hr {
 pre {
 	overflow-x: auto;
 	margin-bottom: 1.5rem;
+	padding: 1.5rem;
+	background: #333;
+	color: rgba(#fff, 50%);
 }
 
 // Address.
@@ -139,7 +134,7 @@ del {
 // Mark & insert.
 mark,
 ins {
-	background: rgba(0, 0, 0, 0.125);
+	background: #eee;
 	text-decoration: none;
 }
 

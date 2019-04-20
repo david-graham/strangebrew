@@ -12,11 +12,12 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 0 auto 0.75rem;
+	margin: 0 0 1.5rem;
 	font-family: font-family(secondary);
 	font-weight: 700;
+	color: color(heading);
 	line-height: 1.5;
-	color: color(heading-color);
+	letter-spacing: -0.01em;
 
 	strong,
 	em {
@@ -26,15 +27,13 @@ h6 {
 }
 
 h1 {
-	margin-bottom: 1.5rem;
-	font-size: rem(42px);
-	line-height: get-line-height(42, 48);
+	font-size: rem(45px);
+	line-height: get-line-height(45px, 60px);
 }
 
 h2 {
 	font-size: rem(30px);
-	padding: rem(3px 0);
-	line-height: get-line-height(30px, 42px);
+	line-height: get-line-height(30px, 36px);
 }
 
 h3 {
@@ -46,7 +45,7 @@ h4 {
 	padding: rem(3px 0);
 	font-size: rem(21px);
 	font-weight: 400;
-	line-height: get-line-height(21px, 30px);
+	line-height: get-line-height(21px, 36px);
 }
 
 h5 {

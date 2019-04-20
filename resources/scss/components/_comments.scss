@@ -53,8 +53,7 @@
 	}
 
 	.comment-respond__reply-title {
-		font-size: rem(30px);
-		line-height: get-line-height(30px, 36px);
+		@extend h2;
 	}
 
 	.comment-respond__field--cookies {

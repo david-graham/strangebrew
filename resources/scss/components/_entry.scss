@@ -6,59 +6,55 @@
 /// @link   http://www.strangebrewdesign.com
 ////
 
+// Common entry.
+.entry {
+
+	// Entry media.
+	&__media {
+		margin-bottom: 1.5rem;
+
+		// SVG container.
+		.svg-featured {
+			display: block;
+			width: 100%;
+			height: auto;
+			background: #ccc;
+		}
+
+		// SVG focus/hover.
+		a:focus .svg-featured,
+		a:hover .svg-featured {
+			background: color(primary);
+		}
+
+		// SVG shape.
+		.svg-featured .svg-shape {
+			fill: color(primary);
+		}
+
+		// SVG icon.
+		.svg-featured .svg-icon {
+			@extend %icon;
+			font-size: rem(45px);
+			line-height: 1;
+			fill: #fff;
+		}
+	}
+}
+
 // Archive entry.
 .plural .entry {
 
-	// Entry image.
-	img {
-		width: 100%;
-		margin-bottom: 1.5rem;
-	}
-
-	// SVG container.
-	.svg-featured {
-		display: block;
-		width: 100%;
-		height: auto;
-		margin: 0 auto 1.5rem;
-		background: #ccc;
-	}
-
-	// SVG focus/hover.
-	a:focus .svg-featured,
-	a:hover .svg-featured {
-		background: color(primary);
-	}
-
-	// SVG shape.
-	.svg-featured .svg-shape {
-		fill: color(primary);
-	}
-
-	// SVG icon.
-	.svg-featured .svg-icon {
-		@extend %icon;
-		font-size: rem(45px);
-		line-height: 1;
-		fill: #fff;
-	}
-
 	// Entry title.
 	&__title {
-		padding: 0;
+		margin: 0 0 0.75rem;
 		font-size: rem(22px);
 		line-height: get-line-height(22px, 30px);
 	}
 
 	// Entry title permalink.
 	&__permalink {
-		color: color(heading-color);
-	}
-
-	// Meta wrappers.
-	&__byline {
-		font-size: rem(15px);
-		line-height: get-line-height(15px, 24px);
+		color: color(heading);
 	}
 }
 
@@ -73,7 +69,7 @@
 	&__header {
 		margin-bottom: rem(48px);
 		border-bottom: 1px solid color(primary);
-		padding: rem(12px 0 24px);
+		padding: rem(0 0 24px);
 		text-align: center;
 	}
 

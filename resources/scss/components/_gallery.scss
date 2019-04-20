@@ -10,7 +10,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
-	margin: rem(1.5rem -6px);
+	margin: rem(1.5rem 0);
 
 	// Circle type gallery
 	&-type-circle {
@@ -22,7 +22,7 @@
 
 	// List item
 	&-item {
-		padding: rem(6px);
+		padding: rem(12px);
 		text-align: center;
 	}
 
@@ -46,14 +46,7 @@
 			max-width: 100%;
 			height: auto;
 			margin: 0 auto;
-			box-sizing: border-box;
-			border: rem(6px solid #ccc);
-		}
-
-		// Hover effect
-		img:hover,
-		a:focus img {
-			border-color: color(primary);
+			outline: rem(3px solid #ccc);
 		}
 	}
 }

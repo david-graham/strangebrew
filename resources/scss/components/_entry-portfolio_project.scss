@@ -21,49 +21,44 @@
 		padding: rem(12px 0 36px);
 		text-align: left;
 
+		@media ( min-width: break(tablet) ) {
+			margin: rem(0 -24px 48px);
+		}
+
 		&::after {
 			@extend %clearfix;
 		}
-
-		.entry__title {
-			text-align: left;
-		}
-
-		p {
-			font-size: rem(22px);
-		}
 	}
 
-	.entry__image {
+	.entry__media {
 		float: right;
-		margin: rem(0 6px 1.5rem 3rem);
-		outline: rem(6px solid #ccc);
+		margin: 0 0 1.5rem 5%;
+		outline: rem(3px solid #ccc);
 
-		@media ( max-width: break(large) ) {
-			max-width: 50%;
+		@media ( max-width: break(tablet) ) {
+			width: 50%;
 		}
 
 		@media ( max-width: break(small) ) {
 			float: none;
-			max-width: 100%;
-			margin-left: auto;
-			margin-right: auto;
+			width: 100%;
+			margin: -0.75rem 0 2.25rem;
 		}
 	}
 
 	.project-meta {
 		list-style-type: none;
 		margin-left: 0;
-		font-size: rem(14px);
-		line-height: get-line-height(14px, 24px);
-
-		li {
-			display: inline-block;
-			margin-right: 1.5rem;
-		}
 
 		.project-key {
-			color: color(primary);
+			display: block;
+			font-weight: 600;
+			color: color(heading);
+		}
+
+		.project-data {
+			font-size: rem(14px);
+			line-height: get-line-height(14px, 24px);
 		}
 	}
 

@@ -13,6 +13,19 @@ img {
 	vertical-align: bottom;
 }
 
+// Image links.
+a img,
+a svg {
+	outline: rem(3px solid #ccc);
+}
+
+a:hover img,
+a:focus img,
+a:hover svg,
+a:focus svg {
+	outline-color: color(primary);
+}
+
 // Figure.
 figure {
 	max-width: 100%;

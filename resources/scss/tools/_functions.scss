@@ -11,6 +11,7 @@
 	@return calc( #{$min-font-size}px + (#{$max-font-size} - #{$min-font-size}) * (100vw - #{$min-viewport-width}px) / (#{$max-viewport-width} - #{$min-viewport-width}));
 }
 
+// Returns unitless line-height.
 @function get-line-height($font-size, $line-height) {
 	@return $line-height / $font-size;
 }

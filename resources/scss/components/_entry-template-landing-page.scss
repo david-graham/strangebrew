@@ -15,10 +15,6 @@
 			overflow: hidden;
 			background-color: color(tertiary);
 
-			@media ( min-width: break('desktop') ) {
-				height: 48rem;
-			}
-
 			// Media overlay.
 			.overlay {
 				position: absolute;
@@ -27,7 +23,7 @@
 				left: 0;
 				right: 0;
 				z-index: 1;
-				background-color: rgba(0, 10, 22, 0.5);
+				background-color: rgba(color(tertiary), 50%);
 				background-image: url(../img/checkered-pattern.png);
 			}
 
@@ -53,17 +49,18 @@
 		&__summary {
 			max-width: content-width();
 			z-index: 10;
-			color: rgba(255, 255, 255, 0.75);
+			color: rgba(#fff, 75%);
 
 			*:last-child {
 				margin-bottom: 0;
 			}
 
-			// Light style headings.
+			// Light style heading.
 			h1,
 			h2,
 			h3 {
 				color: #fff;
+				text-shadow: rem(1px 2px 2px rgba(#000, 25%));
 			}
 
 			h1 {

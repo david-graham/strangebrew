@@ -34,12 +34,17 @@
 
 	.menu__link {
 		display: block;
-		color: rgba(255, 255, 255, 0.75);
+		font-size: rem(17px);
+		line-height: get-line-height(17px, 24px);
+		color: rgba(#fff, 75%);
+	}
 
-		&:hover,
-		&:focus {
-			color: #fff;
-		}
+	.menu__link:hover,
+	.menu__link:focus,
+	.menu__item--current > .menu__link,
+	.menu__item--parent > .menu__link,
+	.menu__item--ancestor > .menu__link {
+		color: #fff;
 	}
 
 	// Has children icon.
@@ -94,7 +99,7 @@
 					right: 999em;
 					width: 18rem;
 					background: color(primary);
-					box-shadow: inset 1px -1px 0 0 rgba(255, 255, 255, 0.325), 0 1px 6px rgba(0, 0, 0, 0.25);
+					box-shadow: rem(inset 1px -1px 0 0 rgba(#fff, 30%), 0 1px 6px rgba(#000, 25%));
 				}
 
 				// Make submenu visible.
@@ -122,7 +127,7 @@
 
 			// Submenu list items.
 			.menu__sub-menu .menu__item {
-				border-top: 1px solid rgba(255, 255, 255, 0.25);
+				border-top: 1px solid rgba(#000, 25%);
 
 				&:first-child {
 					border-top: 0;
@@ -130,7 +135,7 @@
 
 				a:hover,
 				a:focus {
-					background: rgba(255, 255, 255, 0.1);
+					background: rgba(#000, 10%);
 				}
 
 				// Submenu links.
@@ -188,6 +193,10 @@
 				background: color(primary);
 			}
 
+			&::after {
+				content: none;
+			}
+
 			&--selected .menu__icon::before {
 				content: '\f00d';
 			}
@@ -220,16 +229,16 @@
 
 		.menu__link {
 			padding: 1rem;
-			border-top: 1px solid rgba(255, 255, 255, 0.125);
+			border-top: 1px solid rgba(#000, 12.5%);
 
 			&:hover,
 			&:focus {
-				background: rgba(255, 255, 255, 0.05);
+				background: rgba(#fff, 5%);
 			}
 		}
 
 		.menu__sub-menu {
-			background: rgba(0, 0, 0, 0.05);
+			background: rgba(#000, 5%);
 		}
 	}
 }
