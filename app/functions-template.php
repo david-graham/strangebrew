@@ -58,8 +58,9 @@ function get_featured_image( $args = [] ) {
 	$args = wp_parse_args( $args, [
 		'size' 		=> ( ! is_singular() ) ? 'post-thumbnail' : 'strangebrew-medium',
 		'class' 	=> 'entry__image',
-		'before' 	=> ( is_singular() ) ? null : '<a href="' . get_permalink() . '">',
-		'after' 	=> ( is_singular() ) ? null : '</a>'
+		'before' 	=> '<div class="entry__media">',
+		'after' 	=> '</div>',
+		'permalink' => ( ! is_singular() ) ? get_permalink() : null
 	] );
 
 	$image = get_the_post_thumbnail( 
@@ -68,8 +69,14 @@ function get_featured_image( $args = [] ) {
 		[ 'class' => esc_attr( $args['class'] ) ] 
 	);
 
+	// If no image found, get our fallback.
 	if ( empty( $image ) ) {
 		$image = get_featured_fallback();
+	}
+
+	// Add permalink HTML.
+	if ( $args['permalink'] ) {
+		$image = '<a href="' . esc_url( $args['permalink'] ) . '" class="entry__media-link">' . $image . '</a>';
 	}
     
 	return $args['before'] . $image . $args['after'];
