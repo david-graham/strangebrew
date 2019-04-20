@@ -2,11 +2,13 @@
 
 	<header class="entry__header">
 
-		<?php Strangebrew\display_featured_image(); ?>
+		<?php Strangebrew\display_featured_image( [ 'size' => 'strangebrew-thumbnail' ] ); ?>
 
 		<?php Hybrid\Post\display_title() ?>
 
-		<?php ( has_excerpt() ) ? the_excerpt() : NULL; ?>
+		<div class="entry__summary">
+			<?php ( has_excerpt() ) ? the_excerpt() : NULL; ?>
+		</div>
 		
 		<?php
 			$meta = '';
