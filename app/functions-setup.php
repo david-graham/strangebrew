@@ -241,7 +241,7 @@ add_action( 'init', function() {
 add_action( 'init', function() {
 
 	// Set the `post-thumbnail` size.
-	set_post_thumbnail_size( 480, 360, true );
+	set_post_thumbnail_size( 480, 300, true );
 
 	// Register custom image sizes.
 	add_image_size( 'strangebrew-large', 1000, 480, true );
