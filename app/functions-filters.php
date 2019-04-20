@@ -86,6 +86,31 @@ function filter_admin_body_class( $classes ) {
 }
 
 /**
+ * Filter the nav menu item classes.
+ *
+ * @since  0.9.0
+ * @access public
+ * @param  array $classes
+ * @param  array $item
+ * @return array
+ */
+add_filter( 'nav_menu_css_class', 'Strangebrew\nav_menu_css_class', 5, 2 );
+
+function nav_menu_css_class( $classes, $item ) {
+
+	// Don't touch the `current_page_parent` on single posts or post archive.
+	if ( is_singular( 'post' ) || is_post_type_archive( 'post' ) )
+		return $classes;
+
+	// Check if current view is custom post type archive or singular.
+	if ( ( is_singular() || is_post_type_archive() ) && get_post_meta( $item->ID, '_menu_item_object_id', true ) == get_option( 'page_for_posts' ) ) {
+		$classes = array_diff( $classes, array( 'current_page_parent' ) );
+	}
+
+	return $classes;
+}
+
+/**
  * Wraps embeds with `.embed__wrapper` class.
  *
  * @since  0.9.0
