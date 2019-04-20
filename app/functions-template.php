@@ -56,8 +56,10 @@ function display_featured_image( $args = [] ) {
 function get_featured_image( $args = [] ) {
 
 	$args = wp_parse_args( $args, [
-		'size' => ( is_singular() ) ? 'post-thumbnail' : 'strangebrew-medium',
-		'class' => 'entry__image'
+		'size' 		=> ( ! is_singular() ) ? 'post-thumbnail' : 'strangebrew-medium',
+		'class' 	=> 'entry__image',
+		'before' 	=> ( is_singular() ) ? null : '<a href="' . get_permalink() . '">',
+		'after' 	=> ( is_singular() ) ? null : '</a>'
 	] );
 
 	$image = get_the_post_thumbnail( 
@@ -65,8 +67,12 @@ function get_featured_image( $args = [] ) {
 		esc_attr( $args['size'] ), 
 		[ 'class' => esc_attr( $args['class'] ) ] 
 	);
+
+	if ( empty( $image ) ) {
+		$image = get_featured_fallback();
+	}
     
-	return $image ? $image : get_featured_fallback();
+	return $args['before'] . $image . $args['after'];
 }
 
 /**
@@ -82,14 +88,11 @@ function get_featured_fallback() {
 		return;
 
     $svg = sprintf(
-		'<div class="featured-media"><a href="%s">
-			<?xml version="1.0"?>
-			<svg class="svg-featured" width="480" height="300" viewBox="0 0 480 360">
-				<rect class="svg-shape" x="180" y="120" width="120" height="120" transform="rotate(45 240 180)" />
-				<text class="svg-icon" x="240" y="180" text-anchor="middle" alignment-baseline="central" dominant-baseline="central">%s</text>
-			</svg>
-		</a></div>',
-		esc_url( get_permalink() ),
+		'<?xml version="1.0"?>
+		<svg class="svg-featured" width="480" height="300" viewBox="0 0 480 360">
+			<rect class="svg-shape" x="180" y="120" width="120" height="120" transform="rotate(45 240 180)" />
+			<text class="svg-icon" x="240" y="180" text-anchor="middle" alignment-baseline="central" dominant-baseline="central">%s</text>
+		</svg>',
 		get_featured_icon()
 	);
 
