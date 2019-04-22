@@ -66,6 +66,9 @@ add_action( 'wp_enqueue_scripts', function() {
  */
 add_action( 'enqueue_block_editor_assets', function() {
 
+	// Enqueue theme editor scripts.
+	wp_enqueue_script( 'strangebrew-gutenberg', asset( 'js/gutenberg.js' ), array( 'wp-blocks' ) );
+
 	// Enqueue theme editor styles.
 	wp_enqueue_style( 'strangebrew-editor', asset( 'css/editor.css' ), null, null );
 
