@@ -92,7 +92,7 @@ mix.version();
 mix.js( `${devPath}/js/app.js`,                'js' )
    .js( `${devPath}/js/customize-controls.js`, 'js' )
    .js( `${devPath}/js/customize-preview.js`,  'js' )
-   .js( `${devPath}/js/gutenberg.js`,		   'js' );
+   .js( `${devPath}/js/editor.js`,			   'js' );
 
 /*
  * Compile CSS. Mix supports Sass, Less, Stylus, and plain CSS, and has functions

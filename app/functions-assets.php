@@ -58,19 +58,14 @@ add_action( 'wp_enqueue_scripts', function() {
 } );
 
 /**
- * Enqueue scripts/styles for the editor.
+ * Unregisters the core block editor assets on the front end and admin.
  *
+ * @link https://github.com/WordPress/gutenberg/issues/15007
  * @since  0.9.0
  * @access public
  * @return void
  */
-add_action( 'enqueue_block_editor_assets', function() {
-
-	// Enqueue theme editor scripts.
-	wp_enqueue_script( 'strangebrew-gutenberg', asset( 'js/gutenberg.js' ), array( 'wp-blocks' ) );
-
-	// Enqueue theme editor styles.
-	wp_enqueue_style( 'strangebrew-editor', asset( 'css/editor.css' ), null, null );
+add_action( 'enqueue_block_assets', function() {
 
 	// Unregister core block and theme styles.
 	wp_deregister_style( 'wp-block-library' );
@@ -80,7 +75,31 @@ add_action( 'enqueue_block_editor_assets', function() {
 	// necessary to get styles set up correctly.
 	wp_register_style( 'wp-block-library', '' );
 	wp_register_style( 'wp-block-library-theme', '' );
+} );
 
+
+/**
+ * Enqueue scripts/styles for the editor.
+ *
+ * @since  0.9.0
+ * @access public
+ * @return void
+ */
+add_action( 'enqueue_block_editor_assets', function() {
+	
+	$deps = [
+		'wp-i18n',
+		'wp-blocks',
+		'wp-dom-ready',
+		'wp-edit-post',
+		'wp-element',
+	];
+
+	// Enqueue theme editor scripts.
+	wp_enqueue_script( 'strangebrew-editor', asset( 'js/editor.js', $deps, null, true ), array( 'wp-blocks' ) );
+
+	// Enqueue theme editor styles.
+	wp_enqueue_style( 'strangebrew-editor', asset( 'css/editor.css' ), null, null );
 } );
 
 /**

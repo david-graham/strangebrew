@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2.0 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Strangebrew 1.0.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/base\n"
-"POT-Creation-Date: 2019-04-12 21:06:43+00:00\n"
+"Project-Id-Version: Strangebrew 0.9.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/strangebrew\n"
+"POT-Creation-Date: 2019-05-24 01:40:43+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -41,67 +41,67 @@ msgid ""
 "%2$s. Please upgrade and try again."
 msgstr ""
 
-#: app/functions-setup.php:80
-msgid "Charcoal"
+#: app/functions-setup.php:83
+msgid "Primary"
 msgstr ""
 
-#: app/functions-setup.php:85
-msgid "Regent"
+#: app/functions-setup.php:88
+msgid "Secondary"
 msgstr ""
 
-#: app/functions-setup.php:90
-msgid "Husk"
+#: app/functions-setup.php:93
+msgid "Tertiary"
 msgstr ""
 
-#: app/functions-setup.php:95
-msgid "Red Stage"
+#: app/functions-setup.php:98
+msgid "Light Grey"
 msgstr ""
 
-#: app/functions-setup.php:105
+#: app/functions-setup.php:108
 msgid "Small"
 msgstr ""
 
-#: app/functions-setup.php:106
+#: app/functions-setup.php:109
 msgid "S"
 msgstr ""
 
-#: app/functions-setup.php:111
+#: app/functions-setup.php:114
 msgid "Regular"
 msgstr ""
 
-#: app/functions-setup.php:112
+#: app/functions-setup.php:115
 msgid "M"
 msgstr ""
 
-#: app/functions-setup.php:117
+#: app/functions-setup.php:120
 msgid "Large"
 msgstr ""
 
-#: app/functions-setup.php:118
+#: app/functions-setup.php:121
 msgid "L"
 msgstr ""
 
-#: app/functions-setup.php:123
+#: app/functions-setup.php:126
 msgid "Larger"
 msgstr ""
 
-#: app/functions-setup.php:124
+#: app/functions-setup.php:127
 msgid "XL"
 msgstr ""
 
-#: app/functions-setup.php:129
+#: app/functions-setup.php:132
 msgid "Largest"
 msgstr ""
 
-#: app/functions-setup.php:130
+#: app/functions-setup.php:133
 msgid "XXL"
 msgstr ""
 
-#: app/functions-setup.php:285
+#: app/functions-setup.php:294
 msgid "No Entry Header/Footer"
 msgstr ""
 
-#: app/functions-setup.php:293
+#: app/functions-setup.php:302
 msgid "Landing Page"
 msgstr ""
 
@@ -227,23 +227,23 @@ msgstr ""
 msgid "Video Info"
 msgstr ""
 
-#: resources/views/entry/single/portfolio_project.php:13
+#: resources/views/entry/single/portfolio_project.php:15
 msgid "Client"
 msgstr ""
 
-#: resources/views/entry/single/portfolio_project.php:14
+#: resources/views/entry/single/portfolio_project.php:16
 msgid "Location"
 msgstr ""
 
-#: resources/views/entry/single/portfolio_project.php:15
+#: resources/views/entry/single/portfolio_project.php:17
 msgid "Started"
 msgstr ""
 
-#: resources/views/entry/single/portfolio_project.php:16
+#: resources/views/entry/single/portfolio_project.php:18
 msgid "Completed"
 msgstr ""
 
-#: resources/views/entry/single/portfolio_project.php:23
+#: resources/views/entry/single/portfolio_project.php:25
 msgid "View Project"
 msgstr ""
 
@@ -380,19 +380,14 @@ msgstr ""
 msgid "David Graham"
 msgstr ""
 
-#: app/functions-setup.php:217
+#: app/functions-setup.php:220
 msgctxt "nav menu location"
 msgid "Primary"
 msgstr ""
 
-#: app/functions-setup.php:221
+#: app/functions-setup.php:224
 msgctxt "nav menu location"
 msgid "Footer"
-msgstr ""
-
-#: app/functions-setup.php:269
-msgctxt "sidebar"
-msgid "Primary"
 msgstr ""
 
 #: app/functions-template.php:31

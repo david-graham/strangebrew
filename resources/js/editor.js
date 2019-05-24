@@ -11,3 +11,6 @@
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
  * @link      http://www.strangebrewdesign.com
  */
+
+import blocks from './editor/blocks';
+import blockStyles from './editor/block-styles';
