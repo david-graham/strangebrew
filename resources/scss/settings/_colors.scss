@@ -16,11 +16,12 @@
 @function colors() {
 
 	$colors : (
-		primary		: #f26419,
-		secondary	: #00375d,
-		tertiary	: #000a16,
-		text		: #666,
-		heading	: #333
+		primary			: #f26419,
+		secondary		: #17496b,
+		tertiary		: #000a16,
+		text			: #666,
+		heading			: #333,
+		border			: #ccc
 	);
 
 	@return map-merge( $colors, block-colors() );
