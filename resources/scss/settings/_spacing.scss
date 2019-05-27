@@ -16,11 +16,13 @@
 @function spacing-sizes() {
 
 	@return (
-		massive : remo(120px),
-		largest : rem(96px),
-		large   : rem(72px),
-		medium  : rem(48px),
-		small   : rem(24px)
+		massive 	: rem(120px),
+		largest 	: rem(96px),
+		larger		: rem(72px),
+		large   	: rem(48px),
+		medium		: rem(36px),
+		small   	: rem(24px),
+		smallest	: rem(12px)
 	);
 }
 
