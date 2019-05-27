@@ -65,13 +65,10 @@ add_filter( 'admin_body_class', 'Strangebrew\filter_admin_body_class' );
 function filter_admin_body_class( $classes ) {
 
 	// Declare the global post object.
-	global $post;
-
-	// Get $screen object.
-	$screen = get_current_screen();
+	global $post, $pagenow;
 
 	// Make sure we're on the edit post screen.
-	if ( $screen->parent_base != 'edit' )
+	if ( $pagenow !== 'post.php' )
 		return;
 
 	// Get template post meta.
