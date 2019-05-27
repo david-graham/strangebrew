@@ -11,9 +11,24 @@
 
 	&__link {
 		@extend %button;
+		border-radius: 1.5rem;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
 	}
 
 	&.aligncenter {
 		text-align: center;
 	}
+}
+
+.is-style-outline .wp-block-button__link {
+	background: none;
+	color: color(primary);
+	box-shadow: none;
+}
+
+.is-style-squared .wp-block-button__link {
+	border-radius: 0;
+	padding-left: 1rem;
+	padding-right: 1rem;
 }
