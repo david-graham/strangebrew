@@ -68,21 +68,21 @@
 	// Header wrapper.
 	&__header {
 		margin-bottom: rem(48px);
-		border-bottom: 1px solid color(primary);
-		padding: rem(0 0 24px);
+		border-bottom: 1px solid color(border);
+		padding: rem(12px 0 36px);
 		text-align: center;
 	}
 
 	&__summary {
 		font-family: font-family(secondary);
-		font-size: rem(22px);
-		line-height: get-line-height(22px, 36px);
+		font-size: rem(21px);
+		line-height: get-line-height(21px, 36px);
 	}
 
 	&__byline {
 		margin-bottom: 1.5rem;
-		font-size: rem(18px);
-		line-height: get-line-height(18px, 24px);
+		font-family: font-family(secondary);
+		font-weight: 400;
 	}
 
 	&__footer {

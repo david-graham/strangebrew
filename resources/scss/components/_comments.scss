@@ -39,8 +39,8 @@
 	}
 
 	.comment-respond {
-		margin-top: rem(36px);
-		border-top: rem(1px solid color(primary));
+		margin-top: rem(24px);
+		border-top: rem(1px solid color(border));
 		padding-top: rem(36px);
 	}
 
@@ -60,6 +60,8 @@
 		display: flex;
 		padding: 0.75rem;
 		background: #eee;
+		font-size: rem(14px);
+		line-height: get-line-height(14px, 24px);
 
 		label {
 			margin: 0 0 0 0.5rem;
