@@ -8,6 +8,7 @@
 
 .app-header {
 	background: color(secondary);
+	background: linear-gradient(45deg, color(secondary) 0%, lighten(color(secondary), 10%) 100%);
 	box-shadow: rem(0 3px 3px rgba(#000, 25%));
 	font-family: font-family(secondary);
 
@@ -29,6 +30,10 @@
 		float: left;
 		padding: rem(18px 0);
 		width: rem(300px);
+
+		@media ( max-width: break(small) ) {
+			width: rem(250px);
+		}
 	}
 
 	// Logo link.
@@ -37,8 +42,10 @@
 		width: rem(60px);
 		margin-right: 1rem;
 		background: color(primary);
+		background: linear-gradient(45deg, color(primary) 0%, lighten(color(primary), 5%) 100%);
 		box-shadow: rem(inset 0 -3px rgba(#000, 25%), 0 2px 3px rgba(#000, 25%));
 		text-align: center;
+		text-shadow: -0.0625rem -0.0625rem 0 rgba(0, 0, 0, 0.25);
 
 		// Logo icon.
 		.fa {
@@ -68,6 +75,11 @@
 			font-size: rem(27px);
 			line-height: get-line-height(27, 60);
 		}
+
+		@media ( max-width: break(mobile) ) {
+			font-size: rem(24px);
+			line-height: get-line-height(24, 60);
+		}
 	}
 
 	// Site title link.
@@ -80,7 +92,7 @@
 		font-size: rem(15px);
 		font-weight: 300;
 		color: rgba(#fff, 75%);
-		margin-top: rem(-3px);
+		margin-top: rem(-2px);
 
 		@media ( max-width: break(small) ) {
 			display: none;
