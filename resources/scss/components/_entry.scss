@@ -73,12 +73,6 @@
 		text-align: center;
 	}
 
-	&__summary {
-		font-family: font-family(secondary);
-		font-size: rem(21px);
-		line-height: get-line-height(21px, 36px);
-	}
-
 	&__byline {
 		margin-bottom: 1.5rem;
 		font-family: font-family(secondary);
