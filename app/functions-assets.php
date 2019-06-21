@@ -92,11 +92,19 @@ add_action( 'enqueue_block_editor_assets', function() {
 		'wp-blocks',
 		'wp-dom-ready',
 		'wp-edit-post',
-		'wp-element',
 	];
 
 	// Enqueue theme editor scripts.
-	wp_enqueue_script( 'strangebrew-editor', asset( 'js/editor.js', $deps, null, true ), array( 'wp-blocks' ) );
+	wp_enqueue_script( 'strangebrew-editor', asset( 'js/editor.js'), $deps, null, true );
+
+	// For now, we're adding translations via PHP. In the future, when our
+	// tools catch up, we'll internationalize in the JS files.
+	wp_localize_script( 'strangebrew-editor', 'strangebrewEditor', [
+		'labels' => [
+			'default'      => __( 'Default',   'strangebrew' ),
+			'highlight'    => __( 'Highlight', 'strangebrew' )
+		]
+	] );
 
 	// Enqueue theme editor styles.
 	wp_enqueue_style( 'strangebrew-editor', asset( 'css/editor.css' ), null, null );

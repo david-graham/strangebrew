@@ -1,0 +1,30 @@
+////
+/// Paragraph block.
+///
+/// @group  Blocks
+/// @author David Graham <david.graham@strangebrewdesign.com>
+/// @link   http://www.strangebrewdesign.com
+////
+
+.has-drop-cap::first-letter {
+	float: left;
+	line-height: 1;
+	font-family: font-family(secondary);
+	font-size: rem(72px);
+	font-weight: 600;
+	margin: 0 0.75rem 0.75rem 0;
+	text-transform: uppercase;
+	color: color(heading);
+}
+
+%is-style-highlight,
+.is-style-highlight {
+	font-family: font-family(secondary);
+	font-size: rem(21px);
+	line-height: get-line-height(21px, 36px);
+
+	strong {
+		color: color(primary);
+		font-weight: inherit;
+	}
+}
