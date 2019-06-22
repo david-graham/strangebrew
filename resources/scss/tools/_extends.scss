@@ -37,7 +37,7 @@
 	color: #fff;
 	line-height: 1.5;
 	letter-spacing: rem(1px);
-	text-shadow: rem(-1px -1px 0 rgba(0,0,0,0.25));
+	text-shadow: rem(-1px -1px 0 rgba(#000, 25%));
 	text-transform: uppercase;
 
 	&:hover {
@@ -46,7 +46,7 @@
 	}
 
 	// Button icon.
-	&::after {
+	&:not(.customize-partial-edit-shortcut-button)::after {
 		@extend %icon;
 		content: '\f105';
 		position: relative;
