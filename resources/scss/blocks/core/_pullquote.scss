@@ -29,5 +29,10 @@
 	cite,
 	footer {
 		position: relative;
+		font-size: rem(18px);
+		font-style: normal;
+		font-weight: 600;
+		line-height: rem(24px);
+		color: color(heading);
 	}
 }

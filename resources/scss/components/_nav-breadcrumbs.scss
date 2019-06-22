@@ -11,9 +11,13 @@
 	background: linear-gradient(45deg, color(primary) 0%, lighten(color(primary), 10%) 100%);
 	text-align: center;
 
+	.layout-boxed & {
+		text-align: left;
+	}
+
 	// Breadcrumb title
 	&__title {
-		@extend .screen-reader-text;
+		@extend %screen-reader-text;
 	}
 
 	// Breadcrumb trail
@@ -27,7 +31,7 @@
 	// Default crumb.
 	&__crumb {
 		display: inline-block;
-		color: rgba(#fff, 75%);
+		color: #fff;
 		font-weight: 400;
 		max-width: rem(120px);
 		white-space: nowrap;
@@ -59,7 +63,7 @@
 		}
 
 		span {
-			@extend .screen-reader-text;
+			@extend %screen-reader-text;
 		}
 	}
 }
