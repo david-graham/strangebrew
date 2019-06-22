@@ -99,6 +99,10 @@
 		}
 	}
 
+	.gfield_checkbox label {
+		display: inline;
+	}
+
 	// Name Field.
 	.ginput_container_name {
 
@@ -158,7 +162,7 @@
 	}
 
 	.ginput_left,
-	.ginput_right {
+	.ginput_right, {
 		flex-basis: 45%;
 		flex-grow: 1;
 	}
@@ -166,5 +170,23 @@
 	.ginput_right,
 	.ginput_container_name span {
 		margin-left: 0.75rem;
+	}
+
+	.gf_left_half,
+	.gf_right_half {
+		float: left;
+		width: calc(50% - 0.5rem);
+		margin-right: 1rem;
+	}
+
+	.gf_right_half {
+		margin-right: 0;
+	}
+
+	// Hidden text.
+
+	legend.gfield_label,
+	.placeholder-only > label {
+		@extend %screen-reader-text;
 	}
 }
