@@ -7,9 +7,16 @@
 ////
 
 .wp-block-table {
-	width: 100%;
 
 	&.has-fixed-layout {
 		table-layout: fixed;
+		width: 100%;
+	}
+
+	&.is-style-stripes {
+
+		tbody tr:nth-child(odd) {
+			background-color: #eee;
+		}
 	}
 }
