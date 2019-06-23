@@ -12,7 +12,10 @@
 			'menu_id'        => '',
 			'menu_class'     => 'menu__items',
 			'items_wrap'     => '<ul class="%2$s">%3$s</ul>',
-			'item_spacing'   => 'discard'
+			'link_before'	 => '<span>',
+			'link_after'	 => '</span>',
+			'item_spacing'   => 'discard',
+			'depth'			 => 1
 		] ) ?>
 
 	</nav>
