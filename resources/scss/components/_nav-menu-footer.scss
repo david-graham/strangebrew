@@ -7,27 +7,16 @@
 ////
 
 .menu--footer {
-	float: right;
+	margin: 1.5rem auto;
+	text-align: center;
 
 	.menu__items {
 		margin: 0;
-		text-align: center;
 	}
 
 	.menu__item {
-		float: left;
-		margin-left: 2rem;
-
-		&:first-child {
-			list-style-type: none;
-		}
-
-		@media ( max-width: break(medium) ) {
-			float: none;
-			display: inline-block;
-			margin: 0 1rem;
-			text-align: center;
-		}
+		display: inline-block;
+		margin: rem(0 12px);
 	}
 
 	.menu__link {
@@ -36,10 +25,5 @@
 		&:hover {
 			color: #fff;
 		}
-	}
-
-	@media ( max-width: break(medium) ) {
-		float: none;
-		margin: 0 -1rem 0.75rem;
 	}
 }

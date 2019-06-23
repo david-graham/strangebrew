@@ -2,12 +2,14 @@
 
 			<div class="app-footer__wrap">
 
-				<?php Hybrid\View\display( 'nav/menu', 'footer', [ 'location' => 'footer' ] ) ?>
-
 				<p class="app-footer__credit">
-					<?php esc_html_e( 'Powered by crazy ideas and passion.', 'strangebrew' ) ?>
+					<?php esc_html_e( 'Powered by crazy ideas and passion.' ) ?>
 				</p>
 
+				<?php Hybrid\View\display( 'nav/menu', 'social', [ 'location' => 'social' ] ) ?>
+
+				<?php Hybrid\View\display( 'nav/menu', 'footer', [ 'location' => 'footer' ] ) ?>
+				
 			</div>
 
 		</footer>

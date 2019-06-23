@@ -2015,7 +2015,7 @@
 	}
 
 	// Display icon on the link within.
-	.menu__item a::before {
+	.menu__link::before {
 		@extend %icon;
 		margin-right: rem(9px);
 		position: relative;
@@ -2023,11 +2023,11 @@
 	}
 
 	// Highlight active menu item.
-	.menu__item--current > a::before,
-	.menu__item--parent > a::before,
-	.menu__item--ancestor > a::before,
-	.menu__item a:focus::before,
-	.menu__item a:hover::before {
+	.menu__item--current > .menu__link::before,
+	.menu__item--parent > .menu__link::before,
+	.menu__item--ancestor > .menu__link::before,
+	.menu__link:focus::before,
+	.menu__link:hover::before {
 		color: color(primary);
 	}
 }

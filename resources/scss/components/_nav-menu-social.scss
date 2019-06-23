@@ -1,0 +1,43 @@
+////
+/// Nav social menu component.
+///
+/// @group  Components
+/// @author David Graham <david.graham@strangebrewdesign.com>
+/// @link   http://www.strangebrewdesign.com
+////
+
+.menu--social {
+	margin: 1.5rem auto;
+	text-align: center;
+
+	.menu__items {
+		margin: 0;
+	}
+
+	.menu__item {
+		display: inline-block;
+		margin: 0 0.5rem;
+		vertical-align: bottom;
+	}
+
+	.menu__link {
+		color: rgba(#fff, 50%);
+
+		> span {
+			@extend %screen-reader-text;
+		}
+
+		&::before {
+			display: block;
+			font-size: rem(24px);
+			line-height: rem(24px);
+			top: 0;
+			margin: 0;
+		}
+
+		&:hover {
+			color: color(primary);
+			text-decoration: none;
+		}
+	}
+}

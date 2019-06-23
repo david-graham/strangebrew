@@ -224,6 +224,10 @@ add_action( 'init', function() {
 		'footer' => esc_html_x( 'Footer', 'nav menu location', 'strangebrew' )
 	] );
 
+	register_nav_menus( [
+		'social' => esc_html_x( 'Social', 'nav menu location', 'strangebrew' )
+	] );
+
 }, 5 );
 
 /**
