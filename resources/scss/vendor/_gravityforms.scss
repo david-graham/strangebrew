@@ -17,20 +17,6 @@
 		margin: 0 0 1.125rem;
 	}
 
-	// Validation messages.
-
-	.validation_error {
-		margin-bottom: 1.5rem;
-		padding: 1.5rem;
-		background: #eee;
-		border-left: 3px solid color(primary);
-	}
-
-	.validation_message {
-		color: color(primary);
-		font-style: italic;
-	}
-
 	// Required label.
 
 	.gfield_required {
@@ -188,5 +174,25 @@
 	legend.gfield_label,
 	.placeholder-only > label {
 		@extend %screen-reader-text;
+	}
+}
+
+.gform_wrapper,
+.gform_confirmation_wrapper {
+
+	// Validation messages.
+
+	.gform_confirmation_message,
+	.validation_error {
+		margin-bottom: 1.5rem;
+		padding: 1.5rem;
+		background: #eee;
+		border-left: 3px solid color(primary);
+		color: color(text);
+	}
+
+	.validation_message {
+		color: color(primary);
+		font-style: italic;
 	}
 }
