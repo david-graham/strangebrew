@@ -16,8 +16,10 @@
 			'menu_id'        => '',
 			'menu_class'     => 'menu__items',
 			'items_wrap'     => '<ul class="%2$s">%3$s</ul>',
+			'link_before'	 => '<span>',
+			'link_after'	 => '</span>',
 			'item_spacing'   => 'discard',
-			'depth'			 => 3
+			'depth'			 => 2
 		] ) ?>
 
 	</nav>
