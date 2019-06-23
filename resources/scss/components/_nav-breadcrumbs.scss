@@ -33,16 +33,20 @@
 		display: inline-block;
 		color: #fff;
 		font-weight: 400;
-		max-width: rem(120px);
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		vertical-align: bottom;
 
 		&::after {
 			@extend %icon;
 			content: '\f105';
 			margin: rem(0 12px);
+		}
+
+		&:last-of-type {
+			max-width: rem(180px);
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			vertical-align: bottom;
+			color: rgba(#fff, 70%);
 		}
 
 		&:last-of-type::after {

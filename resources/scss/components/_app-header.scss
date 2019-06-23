@@ -10,7 +10,6 @@
 	background: color(secondary);
 	background: linear-gradient(45deg, color(secondary) 0%, lighten(color(secondary), 10%) 100%);
 	box-shadow: rem(0 3px 3px rgba(#000, 25%));
-	font-family: font-family(secondary);
 
 	// Clearing floats.
 	&::after {
@@ -30,6 +29,7 @@
 		float: left;
 		padding: rem(18px 0);
 		width: rem(300px);
+		font-family: font-family(secondary);
 
 		@media ( max-width: break(small) ) {
 			width: rem(250px);

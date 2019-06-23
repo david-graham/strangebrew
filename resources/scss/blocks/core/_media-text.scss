@@ -55,6 +55,10 @@
 		// Whitespace between viewport and text.
 		.wp-block-media-text__content {
 			padding: 10%;
+
+			@media ( min-width: break(desktop) ) {
+				padding: 15%;
+			}
 		}
 
 		// Remove column gap as padding takes care of whitespace.
