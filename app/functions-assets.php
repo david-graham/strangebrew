@@ -40,9 +40,6 @@ add_action( 'wp_enqueue_scripts', function() {
 
 	// Enqueue theme styles.
 	wp_enqueue_style( 'strangebrew-screen', asset( 'css/screen.css' ), null, null );
-	
-	// Enqueue font awesome.
-	wp_enqueue_style( 'strangebrew-font-awesome', asset( 'css/font-awesome.min.css' ), null, null );
 
 	// Enqueue theme fonts.
 	\Hybrid\Font\enqueue( 'strangebrew', [

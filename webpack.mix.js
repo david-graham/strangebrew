@@ -142,8 +142,7 @@ mix.webpackConfig( {
 		new CopyWebpackPlugin( [
 			{ from : `${devPath}/img`,   to : 'img'   },
 			{ from : `${devPath}/svg`,   to : 'svg'   },
-			{ from : `${devPath}/fonts`, to : 'fonts' },
-			{ from : `${devPath}/css`,   to : 'css'   }
+			{ from : `${devPath}/fonts`, to : 'fonts' }
 		] ),
 		// @link https://github.com/Klathmon/imagemin-webpack-plugin
 		new ImageminPlugin( {
