@@ -8,49 +8,36 @@
 
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
+h3 {
 	margin: 0 0 1.5rem;
 	font-family: font-family(secondary);
 	font-weight: 700;
 	color: color(heading);
 	line-height: 1.5;
 
-	strong,
 	em {
-		font-weight: 600;
 		color: color(primary);
+		font-style: normal;
 	}
 }
 
+%h1,
+.h1,
 h1 {
-	font-size: rem(45px);
-	line-height: get-line-height(45px, 60px);
+	font-size: rem(48px);
+	line-height: get-line-height(48px, 60px);
 }
 
+%h2,
+.h2,
 h2 {
-	font-size: rem(30px);
-	line-height: get-line-height(30px, 36px);
+	font-size: rem(36px);
+	line-height: get-line-height(36px, 48px);
 }
 
+%h3,
+.h3,
 h3 {
 	font-size: rem(24px);
-	line-height: get-line-height(24px, 36px);
-}
-
-h4 {
-	padding: rem(3px 0);
-	font-size: rem(21px);
-	font-weight: 400;
-	line-height: get-line-height(21px, 36px);
-}
-
-h5 {
-	font-family: font-family(primary);
-	font-size: rem(16px);
-	line-height: get-line-height(16px, 30px);
-	letter-spacing: 0.01em;
-	text-transform: uppercase;
+	line-height: get-line-height(24px, 30px);
 }

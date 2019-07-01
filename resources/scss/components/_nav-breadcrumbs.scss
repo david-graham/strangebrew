@@ -24,8 +24,8 @@
 	&__trail {
 		margin: 0 auto;
 		padding: rem(12px 24px);
-		font-size: rem(15px);
-		line-height: get-line-height(15px, 24px);
+		font-size: rem(14px);
+		line-height: get-line-height(14px, 24px);
 	}
 
 	// Default crumb.
@@ -41,7 +41,7 @@
 		}
 
 		&:last-of-type {
-			max-width: rem(180px);
+			max-width: rem(150px);
 			white-space: nowrap;
 			overflow: hidden;
 			text-overflow: ellipsis;
@@ -55,19 +55,6 @@
 
 		a {
 			color: #fff;
-		}
-	}
-
-	// Home crumb.
-	&__crumb--home {
-
-		a::before {
-			@extend %icon;
-			content: '\f015';
-		}
-
-		span {
-			@extend %screen-reader-text;
 		}
 	}
 }

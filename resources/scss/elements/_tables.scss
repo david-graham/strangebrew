@@ -8,7 +8,7 @@
 
 table {
 	margin: rem(24px) auto;
-	border: rem(1px solid color(primary));
+	border: rem(1px solid color(border));
 	border-left: none;
 	border-spacing: 0;
 
@@ -24,10 +24,6 @@ table {
 	th,
 	td {
 		padding: rem(11px);
-		border-left: rem(1px solid color(primary));
-	}
-
-	.even {
-		background: #eee;
+		border-left: rem(1px solid color(border));
 	}
 }
