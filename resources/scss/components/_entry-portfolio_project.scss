@@ -18,16 +18,16 @@
 .single-portfolio_project {
 
 	.entry__header {
-		padding: rem(12px 0 36px);
 		text-align: left;
-
-		@media ( min-width: break(desktop) ) {
-			margin: rem(0 -24px 48px);
-		}
 
 		&::after {
 			@extend %clearfix;
 		}
+	}
+
+	.entry__title {
+		font-size: rem(39px);
+		line-height: get-line-height(39px, 48px);
 	}
 
 	.entry__media {

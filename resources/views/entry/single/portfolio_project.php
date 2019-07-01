@@ -1,6 +1,6 @@
 <article <?php Hybrid\Attr\display( 'entry' ) ?>>
 
-	<header class="entry__header">
+	<header class="entry__header alignwide">
 
 		<?php Strangebrew\display_featured_image( [ 'size' => 'strangebrew-thumbnail' ] ); ?>
 
