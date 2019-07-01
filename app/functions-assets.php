@@ -99,7 +99,9 @@ add_action( 'enqueue_block_editor_assets', function() {
 	wp_localize_script( 'strangebrew-editor', 'strangebrewEditor', [
 		'labels' => [
 			'default'      => __( 'Default',   'strangebrew' ),
-			'highlight'    => __( 'Highlight', 'strangebrew' )
+			'alternate'    => __( 'Alternate', 'strangebrew' ),
+			'large'	   	   => __( 'Large',  'strangebrew' ),
+			'boxed'		   => __( 'Boxed', 'strangebrew' )
 		]
 	] );
 

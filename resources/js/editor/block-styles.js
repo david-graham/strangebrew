@@ -15,7 +15,22 @@
 
 wp.domReady( () => {
 
+	// Passthrough translated labels.
+
 	let labels = strangebrewEditor.labels;
+
+	// Heading styles.
+
+	wp.blocks.registerBlockStyle( 'core/heading', {
+		name: 'default',
+		label: labels.default,
+		isDefault: true
+	} );
+
+	wp.blocks.registerBlockStyle( 'core/heading', {
+		name: 'large',
+		label: labels.large
+	} );
 
 	// Paragraph styles.
 
@@ -26,7 +41,7 @@ wp.domReady( () => {
 	} );
 
 	wp.blocks.registerBlockStyle( 'core/paragraph', {
-		name: 'highlight',
-		label: labels.highlight
+		name: 'alternate',
+		label: labels.alternate
 	} );
 } );

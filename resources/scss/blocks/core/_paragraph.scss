@@ -6,24 +6,24 @@
 /// @link   http://www.strangebrewdesign.com
 ////
 
-.has-drop-cap::first-letter {
+p.has-drop-cap::first-letter {
 	float: left;
-	line-height: 1;
+	margin: 0 1rem 1rem 0;
+	padding: 0.5rem 1.25rem;
+	background: color(primary);
 	font-family: font-family(secondary);
-	font-size: rem(72px);
+	font-size: rem(60px);
 	font-weight: 600;
-	margin: 0 0.75rem 0.75rem 0;
+	color: #fff;
+	line-height: 1;
 	text-transform: uppercase;
-	color: color(heading);
 }
 
-%is-style-highlight,
-.is-style-highlight {
+p.is-style-alternate {
 	font-family: font-family(secondary);
-	font-size: rem(21px);
-	line-height: get-line-height(21px, 36px);
 
-	strong {
-		font-weight: 400;
+	em {
+		font-style: normal;
+		color: color(primary);
 	}
 }
