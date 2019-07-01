@@ -31,19 +31,3 @@
 		font-size: #{ $font-size-value };
 	}
 }
-
-
-/// Loops through the spacing sizes and adds utility classes for them.
-
-@each $spacing-size-name, $spacing-size-value in spacing-sizes() {
-
-	.has-#{ $spacing-size-name }-margin {
-		margin-top: #{ $spacing-size-value };
-		margin-bottom: #{ $spacing-size-value };
-	}
-
-	.has-#{ $spacing-size-name }-padding {
-		padding-top: #{ $spacing-size-value };
-		padding-bottom: #{ $spacing-size-value };
-	}
-}
