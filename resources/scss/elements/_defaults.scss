@@ -90,9 +90,17 @@ dd {
 // Blockquotes.
 blockquote {
 	margin-bottom: 1.5rem;
-	border-left: rem(2px solid color(primary));
-	padding-left: 1.5rem;
+	border: rem(1px solid color(border));
+	padding: 2.25rem;
 	font-family: font-family(secondary);
+	font-weight: 400;
+
+	// Cite.
+	cite {
+		font-style: normal;
+		font-weight: 600;
+		color: color(primary);
+	}
 }
 
 // Horizontal rule.
@@ -156,15 +164,10 @@ sup {
 }
 
 // Line breaks in `<h1>`, `<h2`> and `<p>` tags.
-@media ( max-width: break(small) ) {
+@media ( max-width: break( medium ) ) {
 	h1 > br,
 	h2 > br,
 	p > br {
 		display: none;
 	}
-}
-
-// Icons
-.fa {
-	color: color(primary);
 }
