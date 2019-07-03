@@ -8,15 +8,30 @@
 
 .wp-block-columns {
 	display: flex;
+	flex-wrap: wrap;
 
-	@media ( max-width: break(small) ) {
-		display: block;
+	@media ( min-width: break(small) ) {
+		flex-wrap: nowrap;
 	}
 
 	// Individual columns.
 	.wp-block-column {
-		flex: 1;
-		padding: 0 2.5%;
+		flex-grow: 1;
+		margin-bottom: rem(24px);
+
+
+		@media ( min-width: break(small) ) {
+
+			// Apply a left margin to all but the first columns.
+			&:not(:first-child) {
+				margin-left: rem(24px);
+			}
+		}
+
+		// Remove the bottom margin of the last inner block.
+		> :last-child {
+			margin-bottom: 0;
+		}
 	}
 }
 
