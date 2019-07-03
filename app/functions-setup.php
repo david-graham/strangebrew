@@ -190,8 +190,10 @@ add_action( 'after_setup_theme', function() {
 	add_theme_support( 'custom-header', [
 		'default-image'          => '',
 		'random-default'         => false,
-		'width'                  => 750,
-		'height'                 => 422,
+		'flex-width'			 => true,
+		'width'                  => 1000,
+		'flex-height'			 => true,
+		'height'                 => 480,
 		'flex-height'            => false,
 		'flex-width'             => false,
 		'default-text-color'     => '',
