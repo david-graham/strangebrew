@@ -30,6 +30,7 @@ html {
 	@import 'elements/_headings';
 	@import 'elements/_defaults';
 	@import 'blocks/_index';
+	@import 'vendor/_index';
 
 	.editor-post-title__block .editor-post-title__input {
 		font-family: font-family(secondary);

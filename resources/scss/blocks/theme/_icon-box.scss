@@ -1,0 +1,23 @@
+////
+/// Notice block.
+///
+/// @group  Blocks
+/// @author David Graham <david.graham@strangebrewdesign.com>
+/// @link   http://www.strangebrewdesign.com
+////
+
+.wp-block-strangebrew-icon-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+
+	.fa {
+		margin-bottom: 1.5rem;
+		color: color(primary);
+	}
+
+	> :last-child {
+		margin-bottom: 0;
+	}
+}

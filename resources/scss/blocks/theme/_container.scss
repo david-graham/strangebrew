@@ -1,0 +1,63 @@
+////
+/// Container block.
+///
+/// @group  Blocks
+/// @author David Graham <david.graham@strangebrewdesign.com>
+/// @link   http://www.strangebrewdesign.com
+////
+
+.wp-block-strangebrew-container {
+	display: grid;
+	grid-gap: $spacing-global / 2;
+
+	// Grid cell style.
+	> div[class^='wp-block-'] {
+		background: #eee;
+		padding: $spacing-global;
+	}
+
+	&.has-2-columns {
+		grid-template-columns: 1fr 1fr;
+
+		// 2 columns cells needs a bit more padding.
+		> div[class^='wp-block'] {
+			padding: $spacing-global * 2;
+		}
+
+		// From 2 columns to 1 on mobile.
+		@media ( max-width: break(small) ) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&.has-3-columns {
+		grid-template-columns: 1fr 1fr 1fr;
+
+		// From 3 columns to 2 on mobile.
+		@media ( max-width: break(small) ) {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	&.has-4-columns {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+
+		// From 4 columns to 2 on mobile.
+		@media ( max-width: break(small) ) {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	// Editor CSS.
+
+	> .block-editor-inner-blocks > .block-editor-block-list__layout {
+		display: grid;
+		grid-gap: $spacing-global;
+	}
+
+	@for $i from 2 through 6 {
+		&.has-#{ $i }-columns > .block-editor-inner-blocks > .block-editor-block-list__layout {
+			grid-template-columns: repeat( #{$i}, minmax( calc( #{ content-width() } / ( #{ $i } - 1 ) ), 1fr));
+		}
+	}
+}
