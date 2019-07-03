@@ -35,6 +35,7 @@ html {
 	.editor-post-title__block .editor-post-title__input {
 		font-family: font-family(secondary);
 
+		.page-template-entry-content-only &,
 		.page-template-landing-page & {
 			opacity: 0.5;
 		}

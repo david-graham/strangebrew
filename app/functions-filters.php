@@ -34,13 +34,6 @@ function filter_body_class( $classes ) {
 		$classes[] = 'layout-boxed';
 	}
 
-	// Wide & narrow content widths.
-	if ( is_page_template( 'template-landing-page.php' ) || is_singular( 'portfolio_project') ) {
-		$classes[] = 'layout-wide';
-	} else {
-		$classes[] = 'layout-narrow';
-	}
-
 	// Post meta overrides.
 	if ( metadata_exists( 'post', get_the_id(), 'strangebrew_boxed_layout' ) ) {
 
@@ -74,9 +67,13 @@ function filter_admin_body_class( $classes ) {
 	// Get template post meta.
 	$template = get_post_meta( $post->ID, '_wp_page_template', true );
 
-	// Wide & narrow content widths.
+	// Page template classes.
 	if ( isset( $template ) && $template == 'template-landing-page.php' ) {
 		$classes .= " page-template-landing-page";
+	}
+
+	if ( isset( $template ) && $template == 'template-entry-content-only.php' ) {
+		$classes .= " page-template-entry-content-only";
 	}
 
 	return $classes;
