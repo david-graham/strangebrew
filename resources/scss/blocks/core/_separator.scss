@@ -7,6 +7,7 @@
 ////
 
 .wp-block-separator {
+	margin: 0;
 	clear: both;
 
 	&.is-style-wide {
@@ -19,7 +20,7 @@
 	}
 
 	.layout-boxed &.is-style-wide {
-		margin-left: -6rem;
-		margin-right: -6rem;
+		margin-left: rem(-125px);
+		margin-right: rem(-125px);
 	}
 }

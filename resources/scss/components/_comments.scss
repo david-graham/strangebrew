@@ -21,7 +21,7 @@
 	// Comments list wrapper.
 	&__list {
 		list-style: none;
-		max-width: content-width() - 6rem;
+		max-width: content-width() - 125px;
 		margin: 0 auto 3rem;
 
 		// Children lists (note that WP doesn't have a filter -- the

@@ -42,15 +42,11 @@ html {
 	}
 
 	.wp-block {
-		max-width: content-width() + rem(30px);
-
-		.page-template-landing-page & {
-			max-width: content-width() + 12rem;
-		}
+		max-width: content-width();
 	}
 
 	.wp-block[data-align="wide"] {
-		max-width: content-width() + 6rem;
+		max-width: content-width() + 125px;
 	}
 
 	.wp-block[data-align="full"] {

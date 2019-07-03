@@ -20,14 +20,10 @@
 	.layout-boxed & {
 
 		@media ( min-width: break(tablet) ) {
-			max-width: content-width() + 12rem;
+			max-width: content-width() + 250px;
 			margin-top: 1.5rem;
 			margin-bottom: 1.5rem;
 			box-shadow: rem(0 3px 4px rgba(#000, 25%));
 		}
-	}
-
-	.layout-boxed.layout-wide & {
-		max-width: content-width() + 18rem;
 	}
 }
